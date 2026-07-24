@@ -106,23 +106,6 @@ const Heading: React.FC<{ currentStepIndex: number }> = ({
         </CtaRow>
       </HeroSupport>
 
-      <BottomLeftDecor
-        src={CornerStripes}
-        alt=""
-        aria-hidden="true"
-        style={{
-          opacity: glitchFrame >= 2 && currentStepIndex === 0 ? 1 : 0,
-        }}
-      />
-      <BottomRightDecor
-        src={CornerArcs}
-        alt=""
-        aria-hidden="true"
-        style={{
-          opacity: glitchFrame >= 2 && currentStepIndex === 0 ? 1 : 0,
-        }}
-      />
-
       <GlitchWrapper
         style={{
           display: glitchFrame === 1 ? "" : "none",
@@ -147,14 +130,22 @@ const Heading: React.FC<{ currentStepIndex: number }> = ({
         <GlitchEffect image={Left3} alt={""} style={leftGlitch3Styles} />
         <GlitchEffect image={Right3} alt={""} style={rightGlitch3Styles} />
       </GlitchWrapper>
-      <GlitchWrapper
-        style={{
-          display: glitchFrame >= 2 ? "" : "none",
-        }}
-      >
+      <FullBleedDecor style={{ display: glitchFrame >= 2 ? "block" : "none" }}>
         <LeftStarsGears src={LeftStarsAndGears} alt="" />
         <RightStarsGears src={RightStarsAndGears} alt="" />
-      </GlitchWrapper>
+        <BottomLeftDecor
+          src={CornerStripes}
+          alt=""
+          aria-hidden="true"
+          style={{ opacity: currentStepIndex === 0 ? 1 : 0 }}
+        />
+        <BottomRightDecor
+          src={CornerArcs}
+          alt=""
+          aria-hidden="true"
+          style={{ opacity: currentStepIndex === 0 ? 1 : 0 }}
+        />
+      </FullBleedDecor>
     </HeadingContainer>
   );
 };
@@ -213,11 +204,26 @@ const HeroSupport = styled.div`
   }
 `;
 
+/* Full-viewport decoration layer: breaks out of the centred 1200px content
+   box so the background graphics sit at the real screen edges/corners
+   instead of leaving dead side margins. */
+const FullBleedDecor = styled.div`
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+`;
+
 const BottomLeftDecor = styled.img`
   position: absolute;
-  left: 12px;
-  bottom: 20px;
-  width: 168px;
+  left: 3vw;
+  bottom: 24px;
+  width: 190px;
   height: auto;
   pointer-events: none;
   transition: opacity 0.6s ease;
@@ -228,9 +234,9 @@ const BottomLeftDecor = styled.img`
 
 const BottomRightDecor = styled.img`
   position: absolute;
-  right: 12px;
-  bottom: 16px;
-  width: 150px;
+  right: 3vw;
+  bottom: 20px;
+  width: 172px;
   height: auto;
   pointer-events: none;
   transition: opacity 0.6s ease;
@@ -582,52 +588,45 @@ const HeroLeftGlow = styled.div`
 
 const LeftStarsGears = styled(Glitch)`
   position: absolute;
-  top: 80px;
-  right: calc(50% + 290px);
-  width: 300px;
+  top: 104px;
+  left: 2.5vw;
+  width: 320px;
   height: auto;
   animation: ${FlickerAnimationKeyframes} 1.5s infinite;
   z-index: -1;
   overflow: hidden;
   ${mediaQueries.tablet} {
-    width: 250px;
-    top: 290px;
-    right: calc(50% + 220px);
+    width: 200px;
+    top: 250px;
+    left: 1vw;
   }
   @media (max-width: 600px) {
-    width: 170px;
-    top: 200px;
-    right: calc(50% + 150px);
+    width: 150px;
+    top: 190px;
   }
-
   ${mediaQueries.largeMobile} {
-    width: 100px;
-    top: 155px;
-    right: calc(50% + 85px);
+    display: none;
   }
 `;
 
 const RightStarsGears = styled(Glitch)`
   position: absolute;
-  top: 110px;
-  left: calc(50% + 280px);
-  width: 300px;
+  top: 132px;
+  right: 2.5vw;
+  width: 320px;
   height: auto;
   animation: ${FlickerAnimationKeyframes} 1.2s infinite;
   z-index: -1;
   ${mediaQueries.tablet} {
-    width: 300px;
-    top: 270px;
-    left: calc(50% + 180px);
+    width: 220px;
+    top: 240px;
+    right: 1vw;
   }
   @media (max-width: 600px) {
-    width: 200px;
-    top: 200px;
-    left: calc(50% + 150px);
+    width: 160px;
+    top: 190px;
   }
   ${mediaQueries.largeMobile} {
-    width: 100px;
-    top: 175px;
-    left: calc(50% + 80px);
+    display: none;
   }
 `;
