@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { HashLink } from "react-router-hash-link";
 import TextLoop from "react-text-loop";
 import {
   MLHLogo,
@@ -14,7 +15,7 @@ import {
 import { FlickerAnimationKeyframes } from "src/components/base/Animation";
 import { useDeviceSize } from "src/utils";
 import { mediaQueries } from "src/utils/responsive";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { Heading1, Heading2 } from "../../styles";
 
@@ -82,6 +83,27 @@ const Heading: React.FC<{ currentStepIndex: number }> = ({
         </div>
       </Title>
 
+      <HeroSupport
+        style={{
+          opacity: glitchFrame >= 2 && currentStepIndex === 0 ? 1 : 0,
+          pointerEvents: currentStepIndex === 0 ? "auto" : "none",
+        }}
+      >
+        <Tagline>
+          A student community at Thapar Institute — learning, building, and
+          collaborating with code.
+        </Tagline>
+        <CtaRow>
+          <PrimaryCta smooth to="/#about">
+            Explore More <span aria-hidden="true">&rarr;</span>
+          </PrimaryCta>
+          {/* TODO(CCS): point to a dedicated events page/section once it exists */}
+          <GhostCta smooth to="/#about">
+            See Events
+          </GhostCta>
+        </CtaRow>
+      </HeroSupport>
+
       <GlitchWrapper
         style={{
           display: glitchFrame === 1 ? "" : "none",
@@ -122,6 +144,7 @@ export default Heading;
 
 const BottomPadding = styled.div`
   padding-bottom: 5px;
+  color: ${({ theme }) => theme.colors.primary.cyan};
   ${mediaQueries.largeMobile} {
     width: 100vw;
   }
@@ -147,6 +170,7 @@ const WordItem = styled.div<{ $active: boolean }>`
   left: 0;
   right: 0;
   margin: 0 auto;
+  color: ${({ theme }) => theme.colors.primary.cyan};
   opacity: ${({ $active }) => ($active ? 1 : 0)};
   transform: ${({ $active }) =>
     $active
@@ -157,6 +181,83 @@ const WordItem = styled.div<{ $active: boolean }>`
     transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
     filter 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   pointer-events: ${({ $active }) => ($active ? "auto" : "none")};
+`;
+
+const HeroSupport = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 36px;
+  transition: opacity 0.45s ease;
+  ${mediaQueries.tablet} {
+    margin-top: 26px;
+  }
+`;
+
+const Tagline = styled.p`
+  margin: 0 0 26px;
+  max-width: 440px;
+  font-family: "Satoshi";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: ${({ theme }) => theme.colors.text.dark.gray};
+  ${mediaQueries.tablet} {
+    font-size: 16px;
+    margin-bottom: 22px;
+    padding: 0 16px;
+  }
+`;
+
+const CtaRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
+
+const ctaBase = css`
+  font-family: "Satoshi";
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease,
+    border-color 0.15s ease, filter 0.15s ease;
+  will-change: transform;
+`;
+
+const PrimaryCta = styled(HashLink)`
+  ${ctaBase}
+  color: #ffffff;
+  background: linear-gradient(
+    135deg,
+    ${({ theme }) => theme.colors.primary.blue} 0%,
+    ${({ theme }) => theme.colors.primary.cyan} 100%
+  );
+  box-shadow: 0 8px 20px -8px rgba(0, 0, 0, 0.6);
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 26px -10px rgba(0, 0, 0, 0.65);
+    filter: brightness(1.05);
+  }
+`;
+
+const GhostCta = styled(HashLink)`
+  ${ctaBase}
+  color: ${({ theme }) => theme.colors.text.dark.white};
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  &:hover {
+    transform: translateY(-1px);
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(148, 163, 184, 0.45);
+  }
 `;
 
 const HeadingContainer = styled(Column)`
@@ -382,7 +483,7 @@ const HeroRightGlow = styled.div`
   left: 800px;
   top: 250px;
 
-  background: rgba(95, 83, 109, 0.3);
+  background: rgba(59, 130, 246, 0.14);
   filter: blur(200px);
   transform: rotate(-20.03deg) translateZ(0);
 
@@ -411,7 +512,7 @@ const HeroLeftGlow = styled.div`
   left: 250x;
   top: -200px;
 
-  background: rgba(77, 117, 125, 0.25);
+  background: rgba(99, 102, 241, 0.12);
   filter: blur(225px);
   transform: rotate(51.04deg) translateZ(0);
 

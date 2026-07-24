@@ -1,15 +1,16 @@
-import { mediaQueries } from "src/utils";
 import styled from "styled-components";
 
 interface GlowTextProps {
   color: string;
 }
 
+/**
+ * Highlights a word in an accent colour. Previously a white word with a neon
+ * text-shadow bloom; refined to a crisp accent colour (no glow) for a cleaner,
+ * more professional read. Prop name kept as-is for compatibility.
+ */
 const GlowText = styled.span<GlowTextProps>`
-  text-shadow: 0 0 10px ${(props) => props.color};
-  ${mediaQueries.tablet} {
-    text-shadow: none;
-  }
+  color: ${(props) => props.color};
 `;
 
 export default GlowText;

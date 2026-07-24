@@ -13,7 +13,10 @@ const WindowContainer = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  border: 2px solid ${({ theme }) => theme.colors.text.dark.white};
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px -6px rgba(0, 0, 0, 0.5);
 `;
 
 const WindowToolbar = styled.div<WindowProps>`
@@ -27,6 +30,7 @@ const WindowToolbar = styled.div<WindowProps>`
     ${(props) => props.gradientStartColor},
     ${(props) => props.gradientEndColor}
   );
+  border-bottom: 1px solid rgba(148, 163, 184, 0.18);
 
   ${mediaQueries.largeMobile} {
     padding: 9px;
@@ -34,34 +38,34 @@ const WindowToolbar = styled.div<WindowProps>`
   }
 `;
 
+/**
+ * Subtle realistic depth behind the window (replaces the old neon color
+ * bloom). Kept as an element so component structure is unchanged.
+ */
 const ShadowBox = styled.div<WindowProps>`
   content: "";
   z-index: -1;
   position: absolute;
-  top: 0;
+  top: 8px;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    ${(props) => props.gradientStartColor},
-    ${(props) => props.gradientEndColor}
-  );
-  filter: blur(13px);
-  opacity: 0.4;
+  background: rgba(0, 0, 0, 0.55);
+  filter: blur(18px);
+  opacity: 0.5;
   transition: opacity 0.3s;
   border-radius: inherit;
 `;
 
 const WindowToolbarIcon = styled.div`
-  width: 14px;
-  height: 14px;
-  background: rgba(255, 255, 255, 0.5);
-  border: 2px solid ${({ theme }) => theme.colors.text.dark.white};
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
 
   ${mediaQueries.largeMobile} {
-    width: 11px;
-    height: 11px;
+    width: 10px;
+    height: 10px;
   }
 `;
 
@@ -76,10 +80,10 @@ const WindowContentGradient = styled.div<WindowProps>`
   justify-content: center;
   background: linear-gradient(
       90deg,
-      ${(props) => props.gradientStartColor}33,
-      ${(props) => props.gradientEndColor}33
+      ${(props) => props.gradientStartColor}22,
+      ${(props) => props.gradientEndColor}22
     ),
-    #141425;
+    ${({ theme }) => theme.colors.background.dark};
 `;
 
 const BrowserWindow: React.FC<Props> = ({

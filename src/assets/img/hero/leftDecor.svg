@@ -1,0 +1,23 @@
+<svg width="300" height="320" viewBox="0 0 300 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- dotted grid (top-left) -->
+  <g fill="#7c8aa5" fill-opacity="0.5">
+    <circle cx="14" cy="14" r="1.6"/><circle cx="34" cy="14" r="1.6"/><circle cx="54" cy="14" r="1.6"/><circle cx="74" cy="14" r="1.6"/><circle cx="94" cy="14" r="1.6"/>
+    <circle cx="14" cy="34" r="1.6"/><circle cx="34" cy="34" r="1.6"/><circle cx="54" cy="34" r="1.6"/><circle cx="74" cy="34" r="1.6"/><circle cx="94" cy="34" r="1.6"/>
+    <circle cx="14" cy="54" r="1.6"/><circle cx="34" cy="54" r="1.6"/><circle cx="54" cy="54" r="1.6"/><circle cx="74" cy="54" r="1.6"/><circle cx="94" cy="54" r="1.6"/>
+    <circle cx="14" cy="74" r="1.6"/><circle cx="34" cy="74" r="1.6"/><circle cx="54" cy="74" r="1.6"/><circle cx="74" cy="74" r="1.6"/><circle cx="94" cy="74" r="1.6"/>
+  </g>
+
+  <!-- isometric wireframe cube -->
+  <g stroke="#8b99b4" stroke-opacity="0.55" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round" fill="none">
+    <polygon points="150,104 196,131 196,185 150,212 104,185 104,131"/>
+    <path d="M150,104 L150,158 M150,158 L104,185 M150,158 L196,185"/>
+  </g>
+
+  <!-- thin ring accent (cyan, subtle) -->
+  <circle cx="70" cy="250" r="42" stroke="#38bdf8" stroke-opacity="0.32" stroke-width="1.3" fill="none"/>
+  <!-- small plus markers -->
+  <g stroke="#7c8aa5" stroke-opacity="0.5" stroke-width="1.3">
+    <path d="M232,150 h14 M239,143 v14"/>
+    <path d="M210,268 h10 M215,263 v10"/>
+  </g>
+</svg>

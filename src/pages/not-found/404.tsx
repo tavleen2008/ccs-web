@@ -152,10 +152,10 @@ const StyledWhiteHeading1 = styled(WhiteHeading1)`
   ${mediaQueries.tablet} {
     background: linear-gradient(
       270deg,
-      #ff2cfb 0%,
-      #896bff 35.42%,
-      #1fa6ff 68.75%,
-      #19fbff 100%
+      #818cf8 0%,
+      #6366f1 35.42%,
+      #3b82f6 68.75%,
+      #38bdf8 100%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -165,12 +165,12 @@ const StyledWhiteHeading1 = styled(WhiteHeading1)`
 const GradientHeading = styled.span`
   background: linear-gradient(
     270deg,
-    #ff2cfb 0%,
-    #896bff 35.42%,
-    #1fa6ff 68.75%,
-    #19fbff 100%
+    #818cf8 0%,
+    #6366f1 35.42%,
+    #3b82f6 68.75%,
+    #38bdf8 100%
   );
-  filter: blur(20px);
+  filter: blur(12px);
   width: fit-content;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

@@ -98,7 +98,7 @@ const Container = styled.nav.attrs<TContainerProps>(
     style: {
       backgroundColor: isScrolledDown ? background : "transparent",
       borderBottom: isScrolledDown
-        ? "1px solid grey"
+        ? "1px solid rgba(148, 163, 184, 0.18)"
         : "0px solid " + background,
       transform: isHidden
         ? `translateY(-${NAVBAR_HEIGHT_PX}px)`

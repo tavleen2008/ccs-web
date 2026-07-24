@@ -33,8 +33,8 @@ export { default as Left3 } from "./hero/leftGlitch3.png";
 export { default as Right1 } from "./hero/rightGlitch1.png";
 export { default as Right2 } from "./hero/rightGlitch2.png";
 export { default as Right3 } from "./hero/rightGlitch3.png";
-export { default as LeftStarsAndGears } from "./hero/leftStarsGears.png";
-export { default as RightStarsAndGears } from "./hero/rightStarsGears.png";
+export { default as LeftStarsAndGears } from "./hero/leftDecor.svg";
+export { default as RightStarsAndGears } from "./hero/rightDecor.svg";
 
 // Showcase
 export { default as FadeOutImg } from "./showcase/FadeOut.svg";

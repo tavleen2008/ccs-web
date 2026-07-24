@@ -5,6 +5,9 @@ import styled, { keyframes } from "styled-components";
 const SvgContainer = styled.svg`
   max-width: 40vw;
   width: 450px;
+  /* Tone down the neon of the brief glitch-intro frames; the glitch
+     morphology animation itself is unchanged. */
+  filter: saturate(0.6) brightness(0.95);
   ${mediaQueries.large} {
     width: 35vw;
   }

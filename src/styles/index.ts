@@ -3,11 +3,17 @@ import styled, { css } from "styled-components";
 import { DefaultTheme } from "styled-components";
 import tw from "twin.macro";
 
+/**
+ * CCS palette — professional deep-navy system.
+ * NOTE: token keys (primary.pink, primary.cyan, …) are intentionally kept the
+ * same so every consumer keeps working; only the hex values were refined away
+ * from the old neon set toward calm cool tones (steel / cyan / indigo).
+ */
 export const theme: DefaultTheme = {
   colors: {
     background: {
-      dark: "#141425",
-      light: "#29264F",
+      dark: "#0B1220",
+      light: "#172239",
     },
     text: {
       dark: {
@@ -22,26 +28,26 @@ export const theme: DefaultTheme = {
       },
     },
     primary: {
-      cyan: "#19FBFF",
-      blue: "#1FA6FF",
-      purple: "#896BFF",
-      pink: "#FF2CFB",
-      yellow: "#F7CE58",
-      orange: "#F09343",
+      cyan: "#38BDF8",
+      blue: "#3B82F6",
+      purple: "#6366F1",
+      pink: "#818CF8",
+      yellow: "#2563EB",
+      orange: "#3B82F6",
     },
     secondary: {
-      cyan: "#009B9E",
-      blue: "#1574B3",
-      purple: "#8149F2",
-      pink: "#BF21BD",
-      yellow: "#B1923B",
-      orange: "#C47937",
+      cyan: "#0E7490",
+      blue: "#1D4ED8",
+      purple: "#4338CA",
+      pink: "#4F46E5",
+      yellow: "#1E3A8A",
+      orange: "#1D4ED8",
     },
     state: {
-      error: "#FE8888",
-      success: "#88FE8D",
-      infomative: "#88E2FE",
-      warning: "#FCFE88",
+      error: "#F87171",
+      success: "#4ADE80",
+      infomative: "#7DD3FC",
+      warning: "#FCD34D",
     },
   },
 };

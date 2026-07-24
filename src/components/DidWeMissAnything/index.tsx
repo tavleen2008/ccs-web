@@ -107,7 +107,7 @@ const DidWeMissAnything: React.FC = () => {
       <MailingListSignup
         placeholder={
           windowWidth > 1125
-            ? "Sign up for the latest news from Hack the North!"
+            ? "Sign up for the latest news from CCS!"
             : "Sign up for the latest!"
         }
       >

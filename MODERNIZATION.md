@@ -238,6 +238,21 @@ Behavior-neutral config & dead-code cleanups:
 - `.gitignore`: removed stale Next.js (`/.next/`, `/out/`) and Vercel (`.vercel`) entries irrelevant to this CRA app.
 - Removed redundant empty `"prettier": {}` from `package.json` (`.prettierrc` is the single source).
 
+### 🎨 Visual Rebrand — IN PROGRESS (neon → professional navy)
+Design system proposed & approved (deep-navy + steel/cyan/indigo, rare warm amber). Visual spec: published artifact.
+
+**Foundation (verified: type-check ✓ / lint ✓ / build ✓):**
+- Remapped the styled-components `theme` palette in `src/styles/index.ts` — same key names, new professional hex values (neon cyan/pink/purple → steel/cyan/indigo; bg `#141425` → `#0B1220`). Cascades everywhere theme colors are used.
+- Global `body` background → `#0B1220`; `NAVBAR_COLOR` → `#0B1220`.
+- `BrowserWindow`: 2px white border → 1px hairline; neon color-bloom `ShadowBox` → soft realistic shadow; radius 10px + minimal muted controls; content bg via theme.
+
+**Landing de-glow (verified):**
+- `GlowText`: white-word-with-neon-text-shadow → crisp accent-coloured word (no glow).
+- Hero ambient blobs (`HeroLeftGlow`/`HeroRightGlow`): muted purple/teal → subtle steel/indigo at lower opacity.
+
+**Still to do:** Footer rainbow spectrum → cool sweep; Showcase `Stats` `BgGlow`; 404 gradient text; navbar hover polish; then branding text HTN→CCS.
+_All layouts, animations, scroll behaviour, and component structure preserved — only style values changed._
+
 ### Upgraded
 _(pending — scope: safe minor/patch only, per decision)_
 

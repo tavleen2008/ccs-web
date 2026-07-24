@@ -34,6 +34,10 @@ const Hero: React.FC = () => {
       >
         {!useDeviceSize("tablet") ? (
           <FullPageScroller Background={Heading}>
+            {/* Step 0: text-first view — heading shows "Learn" on its own,
+                like the reference. Scrolling advances to the image steps,
+                cycling the word Learn → Code → Collaborate. */}
+            <IntroStep aria-hidden="true" />
             <LeftImgContainer style={{ paddingLeft: "30px" }}>
               <BrowserWindow
                 gradientStartColor={theme.colors.primary.yellow}
@@ -92,6 +96,10 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
+
+const IntroStep = styled.div`
+  width: 100%;
+`;
 
 const LeftImgContainer = styled.div`
   width: 100%;

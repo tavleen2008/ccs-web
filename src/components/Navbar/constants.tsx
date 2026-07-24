@@ -3,7 +3,7 @@ import { SectionId } from "src/constants/section";
 
 export const NAVBAR_HEIGHT_PX = 80;
 
-export const NAVBAR_COLOR = "#141425";
+export const NAVBAR_COLOR = "#0B1220";
 
 export const WEBSITE2022URL = "https://2022.hackthenorth.com";
 

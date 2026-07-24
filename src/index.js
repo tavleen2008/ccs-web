@@ -58,7 +58,7 @@ const resetStyles = css`
     margin: 0;
     padding: 0;
     width: 100vw;
-    background-color: #141425;
+    background-color: #0b1220;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

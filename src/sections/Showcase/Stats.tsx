@@ -341,6 +341,7 @@ const BgGlow = styled.img<glowProps>`
   top: -5%;
   width: 100%;
   height: auto;
+  filter: saturate(0.5) brightness(0.82);
   ${(props) => props.componentStyle}
   @keyframes glowIn {
     from {

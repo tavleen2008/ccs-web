@@ -95,7 +95,7 @@ const MailingListSignup: React.FC<MailingListSignupProps> = ({
               setHasErrors(false);
             }}
             placeholder={refinedPlaceholder}
-            aria-label="Sign up for the latest news from Hack the North!"
+            aria-label="Sign up for the latest news from CCS!"
             aria-required
           />
           <StyledButton
