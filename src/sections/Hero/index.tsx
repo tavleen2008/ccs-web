@@ -13,7 +13,6 @@ import About from "./About";
 import { Column, GradientOverlay } from "./Constants";
 import FullPageScroller from "./FullPageScroller";
 import Heading from "./Heading";
-import SignUpBrowser from "./SignUpBrowser";
 import YouBelongInTech from "./YouBelongInTech";
 
 const Hero: React.FC = () => {
@@ -35,7 +34,6 @@ const Hero: React.FC = () => {
       >
         {!useDeviceSize("tablet") ? (
           <FullPageScroller Background={Heading}>
-            <SignUpBrowser />
             <LeftImgContainer style={{ paddingLeft: "30px" }}>
               <BrowserWindow
                 gradientStartColor={theme.colors.primary.yellow}
@@ -84,7 +82,6 @@ const Hero: React.FC = () => {
         ) : (
           <Column>
             <Heading currentStepIndex={0} />
-            <SignUpBrowser />
           </Column>
         )}
         <About />
