@@ -17,9 +17,6 @@ export { default as YellowVectorImg } from "./404/yellow-vector.png";
 
 // Hero
 export { default as Collaboration } from "./hero/collaboration.jpeg";
-export { default as Connection } from "./hero/connection.jpeg";
-export { default as Dreaming } from "./hero/dreaming.jpeg";
-export { default as Friendship } from "./hero/friendship.jpg";
 export { default as Learning } from "./hero/learning.jpg";
 
 export { default as About1 } from "./hero/about1.jpg";
@@ -63,7 +60,6 @@ export { default as MicsImg } from "./showcase/Mics.svg";
 export { default as ProjectsImg } from "./showcase/Projects.svg";
 export { default as SchoolsImg } from "./showcase/Schools.svg";
 export { default as WorkshopsImg } from "./showcase/Workshops.svg";
-export { default as YtVideoImg } from "./showcase/YTVideo.png";
 export { default as BgGlowImg } from "./showcase/BgGlow.svg";
 export { default as CountriesImg } from "./showcase/Countries.svg";
 

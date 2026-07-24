@@ -7,6 +7,3 @@ export { useMounted } from "./hooks/useMounted";
 
 /* Styling */
 export { mediaQueries } from "./responsive";
-
-/* Functions */
-export { randomize } from "./functions/randomize";

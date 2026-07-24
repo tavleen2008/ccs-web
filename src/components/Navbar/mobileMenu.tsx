@@ -9,7 +9,6 @@ import { SOCIALS } from "src/constants/social";
 import { TWText } from "src/styles";
 import { useWindowSize } from "src/utils";
 
-// import { Button } from "../base";
 import {
   SECTIONS,
   NAVBAR_HEIGHT_PX,

@@ -67,9 +67,7 @@ const resetStyles = css`
   *:after {
     box-sizing: inherit;
   }
-  body > div:first-of-type,
-  div#__next,
-  div#__next > div {
+  body > div:first-of-type {
     height: 100%;
   }
 `;

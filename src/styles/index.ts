@@ -168,17 +168,6 @@ export const TWText = {
   link: tw`font-body font-weight[700] underline text-high-emphasis text-16 leading-extra tb:(text-14)`,
 };
 
-export const TWTransition = {
-  hover: tw`hover:opacity-80 transition-all duration-100 ease-linear`,
-};
-
-export const TWGradient = {
-  default: css`
-    background: linear-gradient(128deg, #edeaf1 0%, rgba(255, 255, 255, 0) 100%),
-      #d1deef;
-  `,
-};
-
 export const TWShared = {
   hover: css`
     &:hover {
@@ -205,27 +194,5 @@ export const TWShared = {
       filter: grayscale(1);
       will-change: filter;
     }
-  `,
-};
-
-export const TWAnimation = {
-  underline: css`
-    position: relative;
-
-    &:after {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      transition: width 250ms;
-    }
-  `,
-};
-
-export const TWFade = {
-  fadeUp: css`
-    opacity: 1;
-  `,
-  fadeDown: css`
-    opacity: 0;
   `,
 };

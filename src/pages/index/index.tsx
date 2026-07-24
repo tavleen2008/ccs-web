@@ -1,6 +1,4 @@
 import React, { lazy, Suspense } from "react";
-// import OrganizerBanner from "src/components/Banner/OrganizerBanner";
-// import VolunteerMentorWorkshopBanner from "src/components/Banner/VolunteerMentorWorkshopBanner";
 import { Navbar } from "src/components";
 import { Layout } from "src/components/base";
 import { Heading3 } from "src/styles";

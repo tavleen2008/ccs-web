@@ -1,7 +1,3 @@
-export { default as Accordion } from "./Accordion";
-export * from "./Accordion";
-export { default as AccordionGroup } from "./AccordionGroup";
-
 export { default as Animation } from "./Animation";
 export * from "./Animation";
 export * from "./Animation/constants";
@@ -32,21 +28,3 @@ export * from "./Layout/SectionWrapper";
 
 export { Link, UnstyledLink } from "./Link";
 export * from "./Link";
-
-export { default as Flex } from "./Flex";
-export * from "./Flex";
-
-export { default as Spacer } from "./Spacer";
-export * from "./Spacer";
-
-export { default as GradientText } from "./GradientText";
-export * from "./GradientText";
-export * from "./GradientText/constants";
-
-export { default as TexturedAsset } from "./TexturedImage";
-export * from "./TexturedImage";
-
-export { default as Glow } from "./Glow";
-export * from "./Glow";
-
-export { default as QA } from "./QA";

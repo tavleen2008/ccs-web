@@ -2,7 +2,6 @@
 export { ReactComponent as MinusIcon } from "./base/minus.svg";
 export { ReactComponent as PlusIcon } from "./base/plus.svg";
 export { ReactComponent as LogoIcon } from "./base/logo.svg";
-export { ReactComponent as ChevronIcon } from "./base/chevron.svg";
 
 /* Social icons */
 export { ReactComponent as FacebookIcon } from "./social/facebook.svg";
