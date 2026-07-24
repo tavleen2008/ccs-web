@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
 import Lottie, { LottieRefCurrentProps } from "lottie-react";
+import React, { useState, useEffect, useRef } from "react";
 import { useHoverEvents } from "src/utils";
 import { useReducedMotion } from "src/utils/hooks/useReducedMotion";
 import styled, { keyframes } from "styled-components";

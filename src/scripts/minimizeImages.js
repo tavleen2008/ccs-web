@@ -1,11 +1,13 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
+const fs = require("fs");
+const util = require("util");
+
+const glob = require("glob");
 const imagemin = require("imagemin");
 const imageminMozjpeg = require("imagemin-mozjpeg");
 const imageminPngquant = require("imagemin-pngquant");
 const imageminSvgo = require("imagemin-svgo");
-const util = require("util");
-const fs = require("fs");
-const glob = require("glob");
+
 const copyFile = util.promisify(fs.copyFile);
 const unlink = util.promisify(fs.unlink);
 const { exec } = require("child_process");

@@ -1,0 +1,8 @@
+<svg width="170" height="170" viewBox="0 0 170 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- concentric quarter arcs anchored to the bottom-right corner -->
+  <path d="M170 128 A42 42 0 0 0 128 170" stroke="#7c8aa5" stroke-opacity="0.5" stroke-width="1.5" fill="none"/>
+  <path d="M170 98 A72 72 0 0 0 98 170" stroke="#38bdf8" stroke-opacity="0.6" stroke-width="1.5" fill="none"/>
+  <path d="M170 68 A102 102 0 0 0 68 170" stroke="#7c8aa5" stroke-opacity="0.4" stroke-width="1.5" fill="none"/>
+  <path d="M170 38 A132 132 0 0 0 38 170" stroke="#e0a458" stroke-opacity="0.5" stroke-width="1.5" fill="none"/>
+  <circle cx="150" cy="150" r="2.6" fill="#2fb4a6" fill-opacity="0.75"/>
+</svg>

@@ -18,7 +18,6 @@ import {
 } from "src/assets/img";
 import { Navbar } from "src/components";
 import { ContentWrapper, Layout, SectionWrapper } from "src/components/base";
-
 import { Heading1 } from "src/styles";
 import { mediaQueries, useDeviceSize } from "src/utils";
 import styled, { keyframes } from "styled-components";

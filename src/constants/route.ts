@@ -5,4 +5,8 @@ export enum Route {
   CODE_OF_CONDUCT = "code-of-conduct",
   TERMS_AND_CONDITIONS = "terms-and-conditions",
   TRAVEL_GUIDELINES = "travel-guidelines",
+  TEAM = "team",
+  EVENTS = "events",
+  ANNOUNCEMENTS = "announcements",
+  ALUMNI = "alumni",
 }

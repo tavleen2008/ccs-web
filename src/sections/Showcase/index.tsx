@@ -11,11 +11,6 @@ import {
   StarOrangeImg,
   StarPurpleImg,
 } from "src/assets/img";
-
-const GearPurpleImg = GearCyanImg;
-const GearYellowImg = GearOrangeImg;
-const StarBlueImg = StarCyanImg;
-const StarYellowImg = StarOrangeImg;
 import { ContentWrapper, SectionWrapper } from "src/components/base";
 import GlowText from "src/components/base/GlowText";
 import { mediaQueries } from "src/utils";
@@ -24,6 +19,11 @@ import styled from "styled-components";
 import { Heading1, theme } from "../../styles";
 
 import Stats from "./Stats";
+
+const GearPurpleImg = GearCyanImg;
+const GearYellowImg = GearOrangeImg;
+const StarBlueImg = StarCyanImg;
+const StarYellowImg = StarOrangeImg;
 
 const HeadingContainer = styled.div`
   display: flex;

@@ -31,9 +31,9 @@ export const theme: DefaultTheme = {
       cyan: "#38BDF8",
       blue: "#3B82F6",
       purple: "#6366F1",
-      pink: "#818CF8",
+      pink: "#A78BFA",
       yellow: "#2563EB",
-      orange: "#3B82F6",
+      orange: "#2FB4A6",
     },
     secondary: {
       cyan: "#0E7490",

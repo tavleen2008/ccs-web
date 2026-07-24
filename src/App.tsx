@@ -3,6 +3,7 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 import { Route as RouteName } from "./constants/route";
 import CodeOfConduct from "./pages/code-of-conduct";
+import ComingSoon from "./pages/ComingSoon";
 import IndexPage from "./pages/index";
 import NotFoundPage from "./pages/not-found/404";
 import Privacy from "./pages/privacy";
@@ -20,6 +21,19 @@ const App: React.FC = () => {
         <Route
           path={RouteName.TRAVEL_GUIDELINES}
           element={<TravelGuidelines />}
+        />
+        <Route path={RouteName.TEAM} element={<ComingSoon title="Team" />} />
+        <Route
+          path={RouteName.EVENTS}
+          element={<ComingSoon title="Events" />}
+        />
+        <Route
+          path={RouteName.ANNOUNCEMENTS}
+          element={<ComingSoon title="Announcements" />}
+        />
+        <Route
+          path={RouteName.ALUMNI}
+          element={<ComingSoon title="Alumni" />}
         />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

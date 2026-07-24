@@ -12,6 +12,8 @@ import {
   LeftStarsAndGears,
   RightStarsAndGears,
 } from "src/assets/img";
+import CornerArcs from "src/assets/img/hero/cornerArcs.svg";
+import CornerStripes from "src/assets/img/hero/cornerStripes.svg";
 import { FlickerAnimationKeyframes } from "src/components/base/Animation";
 import { useDeviceSize } from "src/utils";
 import { mediaQueries } from "src/utils/responsive";
@@ -104,6 +106,23 @@ const Heading: React.FC<{ currentStepIndex: number }> = ({
         </CtaRow>
       </HeroSupport>
 
+      <BottomLeftDecor
+        src={CornerStripes}
+        alt=""
+        aria-hidden="true"
+        style={{
+          opacity: glitchFrame >= 2 && currentStepIndex === 0 ? 1 : 0,
+        }}
+      />
+      <BottomRightDecor
+        src={CornerArcs}
+        alt=""
+        aria-hidden="true"
+        style={{
+          opacity: glitchFrame >= 2 && currentStepIndex === 0 ? 1 : 0,
+        }}
+      />
+
       <GlitchWrapper
         style={{
           display: glitchFrame === 1 ? "" : "none",
@@ -191,6 +210,32 @@ const HeroSupport = styled.div`
   transition: opacity 0.45s ease;
   ${mediaQueries.tablet} {
     margin-top: 26px;
+  }
+`;
+
+const BottomLeftDecor = styled.img`
+  position: absolute;
+  left: 12px;
+  bottom: 20px;
+  width: 168px;
+  height: auto;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+  ${mediaQueries.tablet} {
+    display: none;
+  }
+`;
+
+const BottomRightDecor = styled.img`
+  position: absolute;
+  right: 12px;
+  bottom: 16px;
+  width: 150px;
+  height: auto;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+  ${mediaQueries.tablet} {
+    display: none;
   }
 `;
 

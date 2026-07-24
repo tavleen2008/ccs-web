@@ -1,19 +1,31 @@
 import { Variants } from "framer-motion";
+import { Route } from "src/constants/route";
 import { SectionId } from "src/constants/section";
 
 export const NAVBAR_HEIGHT_PX = 80;
 
 export const NAVBAR_COLOR = "#0B1220";
 
-export const WEBSITE2022URL = "https://2022.hackthenorth.com";
-
 export interface NavBarProps {
   notMainPage?: boolean;
 }
 
+/**
+ * In-page section anchors (scrolled to on the home page).
+ */
 export const SECTIONS = {
   [SectionId.ABOUT]: "About",
 };
+
+/**
+ * Top-level page links (navigate to their own routes).
+ */
+export const NAV_LINKS: { to: string; label: string }[] = [
+  { to: `/${Route.TEAM}`, label: "Team" },
+  { to: `/${Route.EVENTS}`, label: "Events" },
+  { to: `/${Route.ANNOUNCEMENTS}`, label: "Announcements" },
+  { to: `/${Route.ALUMNI}`, label: "Alumni" },
+];
 
 export const mobileBackgroundVariants: Variants = {
   open: (height = 1000) => ({

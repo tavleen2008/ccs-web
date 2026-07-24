@@ -16,7 +16,7 @@ import {
   mobileBackgroundVariants,
   mobileListVariants,
   mobileItemVariants,
-  WEBSITE2022URL,
+  NAV_LINKS,
   NavBarProps,
 } from "./constants";
 
@@ -74,9 +74,9 @@ const MobileMenu: React.FC<TMobileMenuProps> = ({
                 </ListItem>
               );
             })}
-          {!notMainPage ? (
+          {NAV_LINKS.map(({ to, label }) => (
             <ListItem
-              key={Object.keys(SECTIONS).length}
+              key={to}
               variants={mobileItemVariants}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
@@ -87,18 +87,17 @@ const MobileMenu: React.FC<TMobileMenuProps> = ({
               ]}
             >
               <a
-                key={Object.keys(SECTIONS).length}
-                href={WEBSITE2022URL}
-                onClick={() => toggleIsOpen()} // menu should close after section is clicked
+                href={to}
+                onClick={() => toggleIsOpen()} // menu should close after nav item is clicked
                 tabIndex={isHidden ? -1 : 0}
                 aria-hidden={isHidden ? "true" : undefined}
               >
                 <span tw="mb-24" css={[TWText.bodyBold]}>
-                  2022
+                  {label}
                 </span>
               </a>
             </ListItem>
-          ) : null}
+          ))}
           <ListItem tw="h-96">
             <List tw="flex justify-between mt-20">
               {Object.entries(SOCIALS).map(

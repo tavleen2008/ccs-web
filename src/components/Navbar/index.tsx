@@ -1,7 +1,7 @@
 import { motion, useCycle } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import "styled-components/macro";
-import { LogoIcon } from "src/assets/icons";
+import CcsLogo from "src/assets/img/ccs-logo.png";
 import { SectionId } from "src/constants";
 import { mediaQueries, useDeviceSize } from "src/utils";
 import {
@@ -62,11 +62,18 @@ const Navbar: React.FC<NavBarProps> = ({ notMainPage }) => {
     >
       <InnerContainer>
         <div
-          tw="mr-auto my-10 self-center"
+          tw="my-10 self-center"
           style={{ marginLeft: isMediumOrSmaller ? "24px" : "0px" }}
         >
-          <a href={`/#${SectionId.HERO}`} aria-label="Home">
-            <LogoIcon />
+          <a
+            href={`/#${SectionId.HERO}`}
+            aria-label="Creative Computing Society — Home"
+          >
+            <img
+              src={CcsLogo}
+              alt="Creative Computing Society"
+              style={{ height: "52px", width: "auto", display: "block" }}
+            />
           </a>
         </div>
 
@@ -118,7 +125,10 @@ const Container = styled.nav.attrs<TContainerProps>(
 
 const InnerContainer = styled.div`
   max-width: 1202px;
+  width: 100%;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin: auto;
 
   @media (max-width: 1202px) {

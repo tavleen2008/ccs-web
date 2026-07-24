@@ -6,81 +6,71 @@ import Icon from "src/components/base/Icon";
 import { SOCIALS } from "src/constants/social";
 import { TWShared, BodyBold, theme } from "src/styles";
 
-import { NavBarProps, SECTIONS, WEBSITE2022URL } from "./constants";
+import { NavBarProps, SECTIONS, NAV_LINKS } from "./constants";
 
-const containerStyles: React.CSSProperties = {
+const navGroupStyles: React.CSSProperties = {
   display: "flex",
-  justifyContent: "flex-end",
+  flex: 1,
+  justifyContent: "center",
   alignItems: "center",
-  width: "100%",
-  maxWidth: "1202px",
-  gap: "24px",
+  gap: "28px",
   height: "80px",
-  paddingLeft: "32px",
 };
 
-const sectionStyles: React.CSSProperties = {
-  alignSelf: "center",
-  marginLeft: "8px",
-  marginRight: "8px",
+const socialGroupStyles: React.CSSProperties = {
+  display: "flex",
+  alignItems: "center",
+  gap: "18px",
 };
 
-const wesbiteSectionStyles: React.CSSProperties = {
-  alignSelf: "center",
-  marginLeft: "8px",
-  marginRight: "auto",
+const linkStyles: React.CSSProperties = {
+  textDecoration: "none",
+  color: theme.colors.text.dark.white,
 };
 
-const Menu: React.FC<NavBarProps> = ({ notMainPage }) => {
+const Menu: React.FC<NavBarProps> = () => {
   return (
-    <div style={containerStyles}>
-      {!notMainPage &&
-        Object.entries(SECTIONS).map(([id, name]) => {
-          return (
-            <div style={sectionStyles} key={id}>
-              <Link
-                to={"/#" + id}
-                css={[TWShared.hover]}
-                style={{
-                  textDecoration: "none",
-                  color: theme.colors.text.dark.white,
-                }}
-              >
-                <BodyBold>
-                  <span>{name}</span>
-                </BodyBold>
-              </Link>
-            </div>
-          );
-        })}
-      {!notMainPage ? (
-        <div style={wesbiteSectionStyles}>
-          <a
-            href={WEBSITE2022URL}
+    <>
+      <div style={navGroupStyles}>
+        {Object.entries(SECTIONS).map(([id, name]) => (
+          <Link
+            key={id}
+            to={"/#" + id}
             css={[TWShared.hover]}
-            style={{
-              textDecoration: "none",
-              color: theme.colors.text.dark.white,
-            }}
+            style={linkStyles}
           >
-            <BodyBold>2022</BodyBold>
-          </a>
-        </div>
-      ) : null}
-      {Object.entries(SOCIALS).map(([id, { icon, link, fathomEventCode }]) => (
-        <div style={{ alignSelf: "center" }} key={id}>
-          <a
-            aria-label={id}
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => trackGoal(fathomEventCode, 0)}
-          >
-            <Icon name={icon} hover={true}></Icon>
-          </a>
-        </div>
-      ))}
-    </div>
+            <BodyBold>
+              <span>{name}</span>
+            </BodyBold>
+          </Link>
+        ))}
+
+        {NAV_LINKS.map(({ to, label }) => (
+          <Link key={to} to={to} css={[TWShared.hover]} style={linkStyles}>
+            <BodyBold>
+              <span>{label}</span>
+            </BodyBold>
+          </Link>
+        ))}
+      </div>
+
+      <div style={socialGroupStyles}>
+        {Object.entries(SOCIALS).map(
+          ([id, { icon, link, fathomEventCode }]) => (
+            <a
+              key={id}
+              aria-label={id}
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackGoal(fathomEventCode, 0)}
+            >
+              <Icon name={icon} hover={true}></Icon>
+            </a>
+          )
+        )}
+      </div>
+    </>
   );
 };
 
