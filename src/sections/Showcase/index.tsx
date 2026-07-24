@@ -154,9 +154,9 @@ const Showcase: React.FC = () => {
           <HeadingContainer>
             <Heading1>
               <GlowText color={theme.colors.primary.purple}>
-                Last year{" "}
+                Over the years{" "}
               </GlowText>
-              we had...
+              we&apos;ve built...
             </Heading1>
           </HeadingContainer>
           <GearBlue

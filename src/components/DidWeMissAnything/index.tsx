@@ -76,13 +76,14 @@ const DidWeMissAnything: React.FC = () => {
       <Heading>Did we miss anything?</Heading>
       <SubtextWrapper>
         <Subtext>Reach out to us at&nbsp;</Subtext>
+        {/* TODO(CCS): replace with the society's real contact email. */}
         <StyledLink
-          href="mailto:hello@hackthenorth.com"
+          href="mailto:ccs@thapar.edu"
           onClick={
             () => trackGoal("DDFIB6DS", 0) // Sign Up: Clicked Email Contact
           }
         >
-          hello@hackthenorth.com
+          ccs@thapar.edu
         </StyledLink>{" "}
         <span role="img" aria-label="heart emoji">
           &nbsp;😊

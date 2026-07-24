@@ -226,6 +226,8 @@ const StyledComputer = styled.img`
 
 const Icons = styled.img`
   position: absolute;
+  /* de-neon the legacy raster decorations toward the calm CCS palette */
+  filter: saturate(0.6) brightness(0.92);
 `;
 
 const rotate = keyframes`

@@ -15,35 +15,37 @@ type TSocialInfo = {
   fathomEventCode: string;
 };
 
+// TODO(CCS): replace the placeholder "#" links with the society's real social
+// profiles (and remove any platforms CCS does not use).
 export const SOCIALS: Record<SocialPlatforms, TSocialInfo> = {
   [SocialPlatforms.INSTA]: {
     icon: "instagram",
-    link: "https://www.instagram.com/hackthenorth",
+    link: "#",
     fathomEventCode: "LX6A0MAL",
   },
   [SocialPlatforms.TWITTER]: {
     icon: "twitter",
-    link: "https://twitter.com/hackthenorth",
+    link: "#",
     fathomEventCode: "XMBYPYVQ",
   },
   [SocialPlatforms.FACEBOOK]: {
     icon: "facebook",
-    link: "https://www.facebook.com/hackthenorth/",
+    link: "#",
     fathomEventCode: "N8KZMCWY",
   },
   [SocialPlatforms.LINKEDIN]: {
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/hack-the-north",
+    link: "#",
     fathomEventCode: "3ADUIO8D",
   },
   [SocialPlatforms.TIKTOK]: {
     icon: "tiktok",
-    link: "https://www.tiktok.com/@hackthenorth",
+    link: "#",
     fathomEventCode: "YF125KX9",
   },
   [SocialPlatforms.MEDIUM]: {
     icon: "medium",
-    link: "https://hackthenorth.medium.com/",
+    link: "#",
     fathomEventCode: "K5RP1B2Z",
   },
 };

@@ -537,7 +537,8 @@ const Footer: React.FC = () => {
         >
           <FooterContainer>
             <FooterText>
-              Made with 💙 in Waterloo, Ontario, Canada 🇨🇦
+              Made with 💙 by the Creative Computing Society, Thapar Institute,
+              Patiala 🇮🇳
             </FooterText>
             <FooterText id="personal"></FooterText>
           </FooterContainer>
@@ -573,7 +574,7 @@ const Footer: React.FC = () => {
         </MinorBottomContainer>
         <div>
           <CopyrightText style={{ color: `${theme.colors.text.dark.gray}` }}>
-            Copyright © Techyon, 2023
+            Copyright © Creative Computing Society, TIET 2026
           </CopyrightText>
         </div>
       </BottomTextContainer>

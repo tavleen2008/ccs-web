@@ -113,10 +113,10 @@ const History: React.FC = () => {
         </HeadingContainer>
         <SubHeadingContainer>
           <SubHeading>
-            Hack the North hits double digits! In 2023, we&apos;re celebrating
-            the 10th Hack the North.{!isTablet && <br />}
+            For 22+ years, the Creative Computing Society has built a community
+            of makers at Thapar Institute.{!isTablet && <br />}
             {isTablet && " "}
-            Let&apos;s look back at some highlights from past events:
+            Here&apos;s a look back at moments from our journey:
           </SubHeading>
         </SubHeadingContainer>
         <ContentContainer>

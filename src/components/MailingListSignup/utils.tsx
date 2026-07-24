@@ -32,20 +32,10 @@ export const getResultMessage = (signUpState: SignUpState): string => {
   }
 };
 
-// TODO: i don't know what type to put this as
+// TODO(CCS): wire this up to the society's own mailing-list backend.
+// The old Hack the North API call was removed so no data is sent to a third
+// party; until a real endpoint exists this resolves as a local no-op.
 export const signupRequest = async (email: string) => {
-  const response = await fetch("https://api.hackthenorth.com/v3/graphql", {
-    method: "POST",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      query: `mutation { addToMailingList(email: "${email}" event_slug: "hackthenorth2023") { email alreadySignup } }`,
-    }),
-  });
-
-  const content = await response.json();
-
-  return content.data.addToMailingList;
+  await Promise.resolve();
+  return { email, alreadySignup: false };
 };

@@ -67,8 +67,8 @@ const _2014: Year = {
   gradientStart: theme.colors.primary.cyan,
   gradientEnd: theme.colors.primary.blue,
   description: [
-    "Hack the North is founded by a group of undergraduate students at the University of Waterloo in Ontario, Canada. Thank you for 10 years of memories 💙",
-    "Keynote Speakers: Chamath Palihapitiya, Jason Calacanis, & Sam Altman",
+    "The Creative Computing Society community comes together around a shared love of building and problem-solving.",
+    "Learn · Code · Collaborate",
   ],
   top: {
     isMobile: "180px",
@@ -100,7 +100,7 @@ const _2014: Year = {
         isDesktop: "275px",
       },
       order: 0,
-      alt: "Two hackers serve themselves popcorn from a mobile popping machine",
+      alt: "Two students serve themselves popcorn from a mobile popping machine",
     },
     {
       source: Year2014AltImg,
@@ -118,7 +118,7 @@ const _2014: Year = {
         isDesktop: "230px",
       },
       order: 1,
-      alt: "A wide shot of the University of Waterloo’s E7 Building with a large banner which reads “Hack the North” strung up above the entryway",
+      alt: "A wide shot of a campus building with a large event banner strung up above the entryway",
     },
   ],
   fathomEventCode: "SEYHNZIH",
@@ -129,8 +129,8 @@ const _2015: Year = {
   gradientStart: theme.colors.primary.pink,
   gradientEnd: theme.colors.primary.purple,
   description: [
-    "All workshops opened to the public",
-    "Video messages from Sal Khan, Alexis Ohanian, Chris Hadfield",
+    "Workshops open up to every branch, welcoming students of all backgrounds into tech.",
+    "Peer-led sessions and hands-on learning",
   ],
   top: {
     isMobile: "220px",
@@ -163,7 +163,7 @@ const _2015: Year = {
         isDesktop: "230px",
       },
       order: 0,
-      alt: "A large group of hackers sits around several tables that have been pushed together. Laptops and hardware components litter the desk, and a blackboard behind them displays sketches of concepts for their project",
+      alt: "A large group of students sits around several tables that have been pushed together. Laptops and hardware components litter the desk, and a blackboard behind them displays sketches of concepts for their project",
     },
     {
       source: Year2015AltImg,
@@ -181,7 +181,7 @@ const _2015: Year = {
         isDesktop: "275px",
       },
       order: 1,
-      alt: "A therapy dog bows its head as a group of three hackers smile and pet it",
+      alt: "A therapy dog bows its head as a group of three students smile and pet it",
     },
   ],
   fathomEventCode: "BGSG89S1",
@@ -192,8 +192,8 @@ const _2016: Year = {
   gradientStart: theme.colors.primary.yellow,
   gradientEnd: theme.colors.primary.cyan,
   description: [
-    "In 2016, we temporarily expanded our mentorship program to 300 mentors to help hackers one-on-one, helping hackers dream bigger than ever before!",
-    "Keynote Speaker: Vinod Khosla",
+    "Our mentorship network grows, pairing students one-on-one so everyone can dream bigger.",
+    "Mentorship · Guidance · Growth",
   ],
   top: {
     isMobile: "230px",
@@ -226,7 +226,7 @@ const _2016: Year = {
         isDesktop: "370px",
       },
       order: 0,
-      alt: "From above, a crowded hallway full of hackers network with sponsors at various booths",
+      alt: "From above, a crowded hallway full of students network with sponsors at various booths",
     },
     {
       source: Year2016AltImg,
@@ -244,7 +244,7 @@ const _2016: Year = {
         isDesktop: "125px",
       },
       order: 1,
-      alt: "A group of three hackers demonstrate their project on a laptop while three judges look on from behind a table",
+      alt: "A group of three students demonstrate their project on a laptop while three judges look on from behind a table",
     },
   ],
   fathomEventCode: "M98HEF0A",
@@ -255,8 +255,8 @@ const _2017: Year = {
   gradientStart: theme.colors.primary.orange,
   gradientEnd: theme.colors.primary.blue,
   description: [
-    "Every year, we try out new ways to show our hackers how much they mean to us. This year, we sent out personalized acceptance videos to all our hackers",
-    "Keynote Speaker: Balaji Srinivasan + Surprise Guest Justin Trudeau",
+    "We experiment with new ways to make every member feel welcome and seen.",
+    "Community first, always",
   ],
   top: {
     isMobile: "330px",
@@ -289,7 +289,7 @@ const _2017: Year = {
         isDesktop: "0px",
       },
       order: 0,
-      alt: "Prime Minister Justin Trudeau gestures from behind a podium while giving a speech at Hack the North’s opening ceremony",
+      alt: "A speaker gestures from behind a podium while giving a talk at the opening ceremony",
     },
     {
       source: Year2017AltImg,
@@ -307,7 +307,7 @@ const _2017: Year = {
         isDesktop: "150px",
       },
       order: 1,
-      alt: "An organizer behind a table places a wristband on a hacker’s wrist. Behind them, other hackers wait in line for their turn",
+      alt: "An organizer behind a table places a wristband on a student’s wrist. Behind them, other students wait in line for their turn",
     },
   ],
   fathomEventCode: "QRTRCW3H",
@@ -318,8 +318,8 @@ const _2018: Year = {
   gradientStart: theme.colors.primary.blue,
   gradientEnd: theme.colors.primary.purple,
   description: [
-    "We held the first of two iconic Hack the North helicopter landings (the sequel took place in 2019…)",
-    "Keynote Speaker: Chamath Palihapitiya",
+    "A landmark year of flagship events and standout student projects.",
+    "Build · Ship · Repeat",
   ],
   top: {
     isMobile: "250px",
@@ -370,7 +370,7 @@ const _2018: Year = {
         isDesktop: "130px",
       },
       order: 1,
-      alt: "A hacker throws up a peace sign while smiling to the camera in a university classroom, while other students look intently at an ongoing workshop",
+      alt: "A student throws up a peace sign while smiling to the camera in a university classroom, while other students look intently at an ongoing workshop",
     },
   ],
   fathomEventCode: "EEJT4LQM",
@@ -381,8 +381,8 @@ const _2019: Year = {
   gradientStart: theme.colors.primary.purple,
   gradientEnd: theme.colors.primary.orange,
   description: [
-    "Hack the North took on the project of scaling things up — and we expanded the event to 1,500 hackers!",
-    "Keynote Speaker: Jack Dorsey",
+    "We scale things up, reaching more students across campus than ever before.",
+    "A growing community of builders",
   ],
   top: {
     isMobile: "240px",
@@ -415,7 +415,7 @@ const _2019: Year = {
         isDesktop: "0px",
       },
       order: 0,
-      alt: "A hacker places the final cup on a stack of cups at the MLH cup stacking event while spectators look on",
+      alt: "A student places the final cup on a stack of cups at the cup stacking event while spectators look on",
     },
     {
       source: Year2019AltImg,
@@ -433,7 +433,7 @@ const _2019: Year = {
         isDesktop: "140px",
       },
       order: 1,
-      alt: "Rows of hackers stretch out in a pose during a group yoga session",
+      alt: "Rows of students stretch out in a pose during a group yoga session",
     },
   ],
   fathomEventCode: "8MUXTDJR",
@@ -444,8 +444,8 @@ const _2020: Year = {
   gradientStart: theme.colors.primary.pink,
   gradientEnd: theme.colors.primary.cyan,
   description: [
-    "A (slightly delayed) Hack the North went fully online, and we became the biggest hackathon in the world with 3,000+ hackers!",
-    "Keynote Speakers: Chamath Palihapitiya, Vinod Khosla",
+    "The society goes fully online, keeping the community connected from anywhere.",
+    "Resilient · Remote · Together",
   ],
   top: {
     isMobile: "160px",
@@ -478,7 +478,7 @@ const _2020: Year = {
         isDesktop: "275px",
       },
       order: 0,
-      alt: "Two hackers in a virtual call hold their hands up to form a heart",
+      alt: "Two students in a virtual call hold their hands up to form a heart",
     },
     {
       source: Year2020AltImg,
@@ -507,8 +507,8 @@ const _2021: Year = {
   gradientStart: theme.colors.primary.yellow,
   gradientEnd: theme.colors.primary.purple,
   description: [
-    "We threw our first hybrid event featuring activities like rock climbing and outdoor karaoke!",
-    "Keynote Speakers: Garry Tan, Suhail Doshi",
+    "We return with hybrid events blending in-person energy with online reach.",
+    "Hybrid experiences for everyone",
   ],
   top: {
     isMobile: "200px",
@@ -541,7 +541,7 @@ const _2021: Year = {
         isDesktop: "0px",
       },
       order: 0,
-      alt: "Three hackers climb to the top of our outdoor rock climbing wall against a bright blue sky",
+      alt: "Three students climb to the top of our outdoor rock climbing wall against a bright blue sky",
     },
     {
       source: Year2021Img,
@@ -559,7 +559,7 @@ const _2021: Year = {
         isDesktop: "125px",
       },
       order: 1,
-      alt: "The organizing team offers various pieces of Hack the North merch to the camera, including tote bags and a tee shirt",
+      alt: "The organizing team offers various pieces of society merch to the camera, including tote bags and a tee shirt",
     },
   ],
   fathomEventCode: "GHGASG7M",
@@ -570,8 +570,8 @@ const _2022: Year = {
   gradientStart: theme.colors.primary.orange,
   gradientEnd: theme.colors.primary.pink,
   description: [
-    "Hack the North welcomed hackers back to our classic, fully in-person format!",
-    "Keynote Speaker: will.i.am",
+    "Members come back together in person for a full calendar of events.",
+    "Back together, building again",
   ],
   top: {
     isMobile: "180px",
@@ -604,7 +604,7 @@ const _2022: Year = {
         isDesktop: "200px",
       },
       order: 0,
-      alt: "Three hackers work on their project while lounging on a blow-up air mattress",
+      alt: "Three students work on their project while lounging on a blow-up air mattress",
     },
     {
       source: Year2022AltImg,
@@ -622,7 +622,7 @@ const _2022: Year = {
         isDesktop: "275px",
       },
       order: 1,
-      alt: "A group of seven hackers run through an open field playing bubble soccer",
+      alt: "A group of seven students run through an open field playing bubble soccer",
     },
   ],
   fathomEventCode: "DIIU7DUQ",

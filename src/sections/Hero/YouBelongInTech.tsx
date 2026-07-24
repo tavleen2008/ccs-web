@@ -53,7 +53,7 @@ const YouBelongInTech: React.FC = () => {
                   />
                   <Img1
                     src={YouBelongInTech1}
-                    alt="Hacker walking with food in their hands"
+                    alt="A student walking with food in their hands at a society event"
                     loading="lazy"
                   />
                 </div>
@@ -73,7 +73,7 @@ const YouBelongInTech: React.FC = () => {
                   />
                   <Img2
                     src={YouBelongInTech3}
-                    alt="Two hackers holding sleeping bags"
+                    alt="Two students holding sleeping bags at a society event"
                     loading="lazy"
                   />
                 </div>
@@ -94,7 +94,7 @@ const YouBelongInTech: React.FC = () => {
                 />
                 <Img3
                   src={YouBelongInTech2}
-                  alt="10 Hackers posing with umbrellas outdoors in front of a Hack the North banner"
+                  alt="A group of students posing together outdoors at a Creative Computing Society event"
                   loading="lazy"
                 />
               </div>
