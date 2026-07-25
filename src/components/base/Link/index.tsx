@@ -1,10 +1,6 @@
 import React, { ComponentPropsWithRef, useMemo } from "react";
-import {
-  Link as RouterLink,
-  LinkProps as RouterLinkProps,
-} from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 import { LargeBodyBold } from "src/styles";
-import { mediaQueries } from "src/utils";
 import styled from "styled-components";
 
 export type LinkProps = ComponentPropsWithRef<"a"> & {
@@ -74,15 +70,6 @@ const UnderlineWrapper = styled.span`
   &:focus {
     opacity: 0.6;
     cursor: pointer;
-  }
-`;
-
-const Image = styled.img`
-  position: absolute;
-  padding-top: 5px;
-  padding-left: 8px;
-  ${mediaQueries.tablet} {
-    padding-top: 1px;
   }
 `;
 

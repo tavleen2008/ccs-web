@@ -1,4 +1,3 @@
-import { theme } from "src/styles";
 import { mediaQueries } from "src/utils/responsive";
 import styled, { css } from "styled-components";
 

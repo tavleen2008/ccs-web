@@ -3,7 +3,11 @@ import { isTouchOrStylusBasedScreen } from "src/constants";
 
 export const useHoverEvents = (
   setIsHovering: Dispatch<SetStateAction<boolean>>
-) => {
+): {
+  onHoverStart: () => void;
+  onHoverEnd: () => void;
+  toggleHover: () => void;
+} => {
   const onHoverStart = useCallback(() => {
     if (isTouchOrStylusBasedScreen) return;
     setIsHovering(true);

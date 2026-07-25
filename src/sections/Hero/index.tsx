@@ -93,7 +93,3 @@ const RightImgContainer = styled.div`
   align-items: right;
   justify-content: right;
 `;
-
-const LastContainer = styled(Column)`
-  padding-top: 270px;
-`;

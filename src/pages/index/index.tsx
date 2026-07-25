@@ -1,8 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import { Navbar } from "src/components";
 import { Layout } from "src/components/base";
-import { Heading3 } from "src/styles";
-import styled from "styled-components";
 
 const Hero = lazy(() => import("src/sections/Hero"));
 const History = lazy(() => import("src/sections/History"));

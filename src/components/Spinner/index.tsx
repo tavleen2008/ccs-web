@@ -39,7 +39,7 @@ const LoadingRing = styled.div<SpinnerProps>`
   display: inline-block;
   width: ${({ size }) => size}px;
   height: ${({ size }) => size}px;
-  border-width: ${({ size }) => size! / 8}px;
+  border-width: ${({ size = 24 }) => size / 8}px;
   border-style: solid;
   border-radius: 50%;
   border-color: ${({ color }) => color} transparent transparent transparent;

@@ -14,6 +14,10 @@ declare module "react" {
     css?: CSSProp;
   }
   // The inline svg css prop
+  // `T` is required (unused) so this declaration's arity matches the
+  // upstream `SVGProps<T>` in @types/react — TS declaration merging requires
+  // identical type-parameter counts, so removing it would be a type error.
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   interface SVGProps<T> extends SVGProps<SVGSVGElement> {
     css?: CSSProp;
   }

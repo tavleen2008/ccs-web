@@ -409,7 +409,7 @@ const Panel = styled.img<imgProps>`
       : css`
           ${LightModes.LIGHTSOFF}
         `};
-  ${({ currState, hovered, animDone, hoveredExists }) =>
+  ${({ currState, animDone, hoveredExists }) =>
     currState && !hoveredExists && !animDone
       ? css`
           ${LightModes.FLICKERING}
@@ -606,7 +606,7 @@ const YtVideo = styled.div<imgProps>`
       : css`
           ${LightModes.LIGHTSOFF}
         `};
-  ${({ currState, hovered, animDone, hoveredExists }) =>
+  ${({ currState, animDone, hoveredExists }) =>
     currState && !hoveredExists && !animDone
       ? css`
           ${LightModes.FLICKERING}

@@ -1,6 +1,13 @@
 import { trackGoal } from "fathom-client";
 import { motion } from "framer-motion";
 import React, { useRef } from "react";
+// Import order intentionally deviates from the `import/order` rule here:
+// babel-plugin-macros resolves `twin.macro`/`styled-components/macro` at
+// build time, and moving these two imports after the `src/*` imports below
+// (as the rule wants) breaks webpack's production build with a
+// "Can't resolve 'path' in .../babel-plugin-macros/dist" error — confirmed
+// by testing. Keep them here, right after the framework imports.
+// eslint-disable-next-line import/order
 import tw, { styled } from "twin.macro";
 import "styled-components/macro";
 

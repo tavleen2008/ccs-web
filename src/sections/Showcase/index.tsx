@@ -11,7 +11,7 @@ import {
   StarOrangeImg,
   StarPurpleImg,
 } from "src/assets/img";
-import { ContentWrapper, SectionWrapper } from "src/components/base";
+import { ContentWrapper } from "src/components/base";
 import GlowText from "src/components/base/GlowText";
 import { mediaQueries } from "src/utils";
 import styled from "styled-components";

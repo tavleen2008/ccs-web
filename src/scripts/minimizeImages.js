@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
+const { exec } = require("child_process");
 const fs = require("fs");
+const { join, basename } = require("path");
 const util = require("util");
 
 const glob = require("glob");
@@ -10,8 +12,6 @@ const imageminSvgo = require("imagemin-svgo");
 
 const copyFile = util.promisify(fs.copyFile);
 const unlink = util.promisify(fs.unlink);
-const { exec } = require("child_process");
-const { join, basename } = require("path");
 
 const minimizeFile = async (from, to) => {
   await imagemin([from], to, {

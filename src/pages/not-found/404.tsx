@@ -192,10 +192,6 @@ const TextWrapper = styled.div`
   }
 `;
 
-const StyledLinkWrapper = styled.div`
-  margin-top: 40px;
-`;
-
 const StyledComputer = styled.img`
   scale: 0.9;
   ${mediaQueries.largeMobile} {

@@ -1,5 +1,4 @@
 import React from "react";
-import { HashLink } from "react-router-hash-link";
 import TextLoop from "react-text-loop";
 import { LeftStarsAndGears, RightStarsAndGears } from "src/assets/img";
 import CornerArcs from "src/assets/img/hero/cornerArcs.svg";
@@ -7,9 +6,9 @@ import CornerStripes from "src/assets/img/hero/cornerStripes.svg";
 import { FlickerAnimationKeyframes } from "src/components/base/Animation";
 import { useDeviceSize } from "src/utils";
 import { mediaQueries } from "src/utils/responsive";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
-import { Heading1, Heading2 } from "../../styles";
+import { Heading1 } from "../../styles";
 
 import { Column } from "./Constants";
 
@@ -19,11 +18,8 @@ const Heading: React.FC<{ currentStepIndex: number }> = ({
   currentStepIndex,
 }) => {
   const currentWordIndex = currentStepIndex % words.length;
-  const currentWord = words[currentWordIndex];
 
   const isTablet = useDeviceSize("tablet");
-  const brk = useDeviceSize(581);
-  const titleBrk = useDeviceSize(1124);
 
   return (
     <HeadingContainer>
@@ -198,53 +194,6 @@ const Tagline = styled.p`
   }
 `;
 
-const CtaRow = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 14px;
-  flex-wrap: wrap;
-  justify-content: center;
-`;
-
-const ctaBase = css`
-  font-family: "Satoshi";
-  font-size: 16px;
-  font-weight: 700;
-  text-decoration: none;
-  padding: 12px 22px;
-  border-radius: 10px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease,
-    border-color 0.15s ease, filter 0.15s ease;
-  will-change: transform;
-`;
-
-const PrimaryCta = styled(HashLink)`
-  ${ctaBase}
-  color: #ffffff;
-  background: ${({ theme }) => theme.colors.solid.steelBlue};
-  box-shadow: 0 8px 20px -8px rgba(0, 0, 0, 0.6);
-  &:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 12px 26px -10px rgba(0, 0, 0, 0.65);
-    background: ${({ theme }) => theme.colors.solid.mutedCyan};
-  }
-`;
-
-const GhostCta = styled(HashLink)`
-  ${ctaBase}
-  color: ${({ theme }) => theme.colors.text.dark.white};
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(148, 163, 184, 0.28);
-  &:hover {
-    transform: translateY(-1px);
-    background: rgba(255, 255, 255, 0.07);
-    border-color: rgba(148, 163, 184, 0.45);
-  }
-`;
-
 const HeadingContainer = styled(Column)`
   color: ${({ theme }) => theme.colors.text.dark.white};
   padding-top: 160px;
@@ -296,46 +245,6 @@ const Title = styled(Heading1)`
     line-height: 43px;
     padding: 0 25px;
     margin: 0 5px;
-  }
-`;
-
-const Subtitle = styled(Heading2)`
-  font-size: 20px;
-  margin-top: 20px;
-  ${mediaQueries.tablet} {
-    font-weight: 700;
-    line-height: 32px;
-    margin-top: 15px;
-  }
-  @media (max-width: 640px) {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 28px;
-  }
-  @media (max-width: 500px) {
-    font-family: "Satoshi";
-    font-size: 16px;
-    line-height: 26px;
-    font-weight: 400;
-    padding: 0 10px;
-  }
-`;
-
-const StyledLogo = styled.img`
-  margin-bottom: -4px;
-  scale: 0.8;
-  opacity: 0.85;
-  ${mediaQueries.tablet} {
-    margin-bottom: -5px;
-  }
-  @media (max-width: 600px) {
-    scale: 0.7;
-    margin-right: -2px;
-  }
-  ${mediaQueries.largeMobile} {
-    margin-bottom: -5.5px;
-    margin-right: -5px;
-    scale: 0.65;
   }
 `;
 

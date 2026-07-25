@@ -6,7 +6,10 @@ import { useMounted } from "src/utils/hooks/useMounted";
  * of the window. Responsive to window
  * resizes.
  */
-export const useWindowSize = () => {
+export const useWindowSize = (): {
+  windowWidth: number | undefined;
+  windowHeight: number | undefined;
+} => {
   const mounted = useMounted();
 
   const [width, setWidth] = useState<number | undefined>();

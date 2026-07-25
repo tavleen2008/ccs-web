@@ -1,6 +1,5 @@
 import React, {
   useMemo,
-  forwardRef,
   CSSProperties,
   ElementType,
   ComponentPropsWithRef,

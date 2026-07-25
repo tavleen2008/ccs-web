@@ -35,7 +35,9 @@ export const getResultMessage = (signUpState: SignUpState): string => {
 // TODO(CCS): wire this up to the society's own mailing-list backend.
 // The old Hack the North API call was removed so no data is sent to a third
 // party; until a real endpoint exists this resolves as a local no-op.
-export const signupRequest = async (email: string) => {
+export const signupRequest = async (
+  email: string
+): Promise<{ email: string; alreadySignup: boolean }> => {
   await Promise.resolve();
   return { email, alreadySignup: false };
 };
