@@ -1,18 +1,4 @@
 import React, { useEffect } from "react";
-import {
-  blueRect,
-  greenRect,
-  longGreenRect,
-  longGreenRect2,
-  longPinKRect,
-  longYellowRect,
-  longYellowRect2,
-  medPinkRect,
-  medYellowRect,
-  pinkRect,
-  yellowRect,
-  yellowRect2,
-} from "src/assets/img";
 import { ContentWrapper, SectionWrapper } from "src/components/base";
 import { ORGANIZERS } from "src/copy/organizers";
 import { LargeBodyBold, theme } from "src/styles";
@@ -220,75 +206,6 @@ const CopyrightText = styled.p`
   }
 `;
 
-const GlitchIcons = styled.img`
-  position: absolute;
-  z-index: 10;
-
-  ${mediaQueries.custom(768)} {
-    display: none;
-  }
-`;
-
-const YellowRect = styled(GlitchIcons)`
-  bottom: 70px;
-  left: 20px;
-`;
-
-const YellowRect2 = styled(GlitchIcons)`
-  bottom: 220px;
-  left: 220px;
-`;
-
-const LongYellowRect = styled(GlitchIcons)`
-  bottom: 200px;
-  left: 90px;
-`;
-
-const LongYellowRect2 = styled(GlitchIcons)`
-  top: 140px;
-  left: 200px;
-`;
-
-const MedYellowRect = styled(GlitchIcons)`
-  bottom: 80px;
-  left: 340px;
-`;
-
-const BlueRect = styled(GlitchIcons)`
-  top: 140px;
-  left: 460px;
-`;
-
-const GreenRect = styled(GlitchIcons)`
-  bottom: 130px;
-  right: 470px;
-`;
-
-const LongGreenRect = styled(GlitchIcons)`
-  top: 160px;
-  right: 370px;
-`;
-
-const LongGreenRect2 = styled(GlitchIcons)`
-  bottom: 80px;
-  right: 250px;
-`;
-
-const PinkRect = styled(GlitchIcons)`
-  top: 220px;
-  right: 105px;
-`;
-
-const LongPinkRect = styled(GlitchIcons)`
-  top: 70px;
-  right: 80px;
-`;
-
-const MedPinkRect = styled(GlitchIcons)`
-  bottom: 140px;
-  right: 25px;
-`;
-
 const Footer: React.FC = () => {
   useEffect(() => {
     let intervalId: number | undefined;
@@ -372,18 +289,6 @@ const Footer: React.FC = () => {
 
   return (
     <SectionWrapper>
-      <YellowRect src={yellowRect} alt="yellow rectangle" />
-      <YellowRect2 src={yellowRect2} alt="yellow rectangle" />
-      <LongYellowRect src={longYellowRect} alt="long yellow rectangle" />
-      <LongYellowRect2 src={longYellowRect2} alt="long yellow rectangle" />
-      <MedYellowRect src={medYellowRect} alt="med yellow rectangle" />
-      <BlueRect src={blueRect} alt="blue rectangle" />
-      <GreenRect src={greenRect} alt="green rectangle" />
-      <LongGreenRect src={longGreenRect} alt="long green rectangle" />
-      <LongGreenRect2 src={longGreenRect2} alt="long green rectangle" />
-      <PinkRect src={pinkRect} alt="pink rectangle" />
-      <LongPinkRect src={longPinKRect} alt="long pink rectangle" />
-      <MedPinkRect src={medPinkRect} alt="med pink rectangle" />
       <OrganizerContentWrapper>
         <LeftGrid>
           {firstHalf.map((organizer, i) => (

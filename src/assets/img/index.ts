@@ -129,16 +129,3 @@ export { default as StephanieImg } from "./organizers/stephanie.jpeg";
 export { default as TanishiImg } from "./organizers/tanishi.jpeg";
 export { default as YassineImg } from "./organizers/yassine.jpeg";
 export { default as YinanImg } from "./organizers/yinan.jpeg";
-
-export { default as yellowRect } from "./organizers/yellow-rect.svg";
-export { default as yellowRect2 } from "./organizers/yellow-rect-2.svg";
-export { default as longYellowRect } from "./organizers/long-yellow-rect.svg";
-export { default as longYellowRect2 } from "./organizers/long-yellow-rect-2.svg";
-export { default as medYellowRect } from "./organizers/med-yellow-rect.svg";
-export { default as blueRect } from "./organizers/blue-rect.svg";
-export { default as greenRect } from "./organizers/green-rect.svg";
-export { default as longGreenRect } from "./organizers/long-green-rect.svg";
-export { default as longGreenRect2 } from "./organizers/long-green-rect-2.svg";
-export { default as pinkRect } from "./organizers/pink-rect.svg";
-export { default as longPinKRect } from "./organizers/long-pink-rect.svg";
-export { default as medPinkRect } from "./organizers/med-pink-rect.svg";
