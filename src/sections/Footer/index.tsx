@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { ContentWrapper, SectionWrapper } from "src/components/base";
-import { ORGANIZERS } from "src/copy/organizers";
+import { ORGANIZERS, Organizer } from "src/copy/organizers";
 import { LargeBodyBold, theme } from "src/styles";
 import { mediaQueries } from "src/utils";
 import styled, { css } from "styled-components";
@@ -291,7 +291,7 @@ const Footer: React.FC = () => {
     <SectionWrapper>
       <OrganizerContentWrapper>
         <LeftGrid>
-          {firstHalf.map((organizer, i) => (
+          {firstHalf.map((organizer: Organizer, i: number) => (
             <div
               key={i}
               data-key={i}
@@ -330,7 +330,7 @@ const Footer: React.FC = () => {
           </FooterContainer>
         </div>
         <RightGrid>
-          {secondHalf.map((organizer, i) => (
+          {secondHalf.map((organizer: Organizer, i: number) => (
             <div
               key={i}
               data-key={i + HALF_ORGANIZERS}
@@ -352,18 +352,6 @@ const Footer: React.FC = () => {
           ))}
         </RightGrid>
       </OrganizerContentWrapper>
-      <BottomTextContainer>
-        <MinorBottomContainer>
-          <BottomText href="/code-of-conduct">Code of Conduct</BottomText>
-          <BottomText href="/travel-guidelines">Travel Guidelines</BottomText>
-          <BottomText href="/privacy">Privacy Policy</BottomText>
-        </MinorBottomContainer>
-        <div>
-          <CopyrightText style={{ color: `${theme.colors.text.dark.gray}` }}>
-            Copyright © Creative Computing Society, TIET 2026
-          </CopyrightText>
-        </div>
-      </BottomTextContainer>
     </SectionWrapper>
   );
 };

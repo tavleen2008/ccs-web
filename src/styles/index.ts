@@ -188,7 +188,7 @@ export const TWText = {
   bodyBold: tw`font-body font-weight[700] text-high-emphasis text-16 leading-relaxed tb:(text-14 leading-extra)`,
   overline: tw`font-body font-weight[500] text-high-emphasis text-16 tracking-wide leading-relaxed`,
   caption: tw`font-body font-weight[400] text-high-emphasis text-14 leading-loose tb:(text-10)`,
-  note: tw`font-note font-weight[400] text-blue-gray text-20 leading-relaxed`,
+  note: tw`font-body font-weight[400] text-blue-gray text-20 leading-relaxed`,
   cta: tw`font-body font-weight[500] text-high-emphasis text-16 leading-extra tb:(text-10)`,
   link: tw`font-body font-weight[700] underline text-high-emphasis text-16 leading-extra tb:(text-14)`,
 };

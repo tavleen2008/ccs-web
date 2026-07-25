@@ -1,22 +1,7 @@
-export type TDeviceType =
-  | "large"
-  | "medium"
-  | "tablet"
-  | "largeMobile"
-  | "mobile"
-  | "smallMobile";
+import { deviceBreakpoints, DeviceType } from "src/constants/deviceBreakpoints";
 
-/**
- * Maximum widths in px for a screen to be considered each type of device.
- */
-export const deviceBreakpoints: Record<TDeviceType, number> = {
-  large: 1440,
-  medium: 1024,
-  tablet: 834,
-  largeMobile: 430,
-  mobile: 375,
-  smallMobile: 320,
-};
+export type TDeviceType = DeviceType;
+export { deviceBreakpoints };
 
 const customMediaQuery = (maxWidth: number): string =>
   `@media (max-width: ${maxWidth}px)`;

@@ -1,4 +1,4 @@
-export const title = "Travel Guidelines";
+﻿export const title = "Travel Guidelines";
 export const content = `
 ## Key Points
 
@@ -24,7 +24,7 @@ export const content = `
   - PayPal - up to 12 weeks after the event
   - Interac e-Transfer - up to 12 weeks after the event
   
-- Bring government issued ID (driver’s license, passport, etc) if you are being reimbursed at Hack the North.
+- Bring government issued ID (driverΓÇÖs license, passport, etc) if you are being reimbursed at Hack the North.
 
 **Please note that you must be in attendance for the duration of the event and submit a project at Hack the North 2023 in order to receive your travel reimbursement.** We reserve the right to withhold your reimbursement if evidence exists that you were not present for the majority of the weekend.
 
@@ -33,7 +33,7 @@ In the unlikely event that that Hack the North cannot be held in person due to w
 ## Flights
 - Book your flight to **Toronto Pearson International Airport (YYZ)**
   - If you find that it is cheaper to fly to another location and travel the rest of the way by other means (i.e. fly to Montreal and take a Hack the North provided bus from McGill), email us at [travel@hackthenorth.com](mailto:travel@hackthenorth.com).
-- **If it’s cheaper to fly to the Waterloo Airport using Flair Airlines, please contact [travel@hackthenorth.com](mailto:travel@hackthenorth.com).**
+- **If itΓÇÖs cheaper to fly to the Waterloo Airport using Flair Airlines, please contact [travel@hackthenorth.com](mailto:travel@hackthenorth.com).**
 
 **Flight timing**
 - Arrive no later than 6:00 PM on Friday, September 15.
@@ -49,7 +49,7 @@ In the unlikely event that that Hack the North cannot be held in person due to w
 - **Your reimbursement amount**
   - If your flight cost is below the reimbursement amount shown on your dashboard, we will reimburse you only for the flight cost.
 - **Reimbursement restrictions**
-  - In general, we will not reimburse flights that arrive at Toronto Pearson International Airport before September 10th or that leave Toronto Pearson International Airport after September 22nd. If you have outstanding circumstances, please email [travel@hackthenorth.com](mailto:travel@hackthenorth.com) and we’ll see what we can do.
+  - In general, we will not reimburse flights that arrive at Toronto Pearson International Airport before September 10th or that leave Toronto Pearson International Airport after September 22nd. If you have outstanding circumstances, please email [travel@hackthenorth.com](mailto:travel@hackthenorth.com) and weΓÇÖll see what we can do.
   - We will _not_ reimburse direct flights from locations that are reasonably close to a provided Hack the North bus location
 - **Airport customs**
   - If you are going to travel with hardware through carry-on luggage, be sure to declare it to Customs officers at the border or at the airport!
@@ -64,7 +64,7 @@ In the unlikely event that that Hack the North cannot be held in person due to w
 - We are anticipating that we will be sending buses, free of cost, to the following locations:
   - University of Toronto, St. George Campus
   - McMaster University
-  - Queen’s University
+  - QueenΓÇÖs University
   - Western University
   - University of Ottawa
   - McGill University
@@ -93,7 +93,7 @@ In the unlikely event that that Hack the North cannot be held in person due to w
 - All international hackers, with the exception of U.S. citizens, need either a **Canadian visitor visa** or an **Electronic Travel Authorization (eTA)** to travel to Canada. To see which document you need, please visit [https://www.cic.gc.ca/english/visit/visas.asp](https://www.cic.gc.ca/english/visit/visas.asp).
 - **You must arrange and pay for the cost of the appropriate document by yourself.**
 - Expect delays with visitor visa processing times and plan accordingly. International hackers are strongly encouraged to **apply for your visa as soon as you receive your offer.**
-  - To see your country’s average application processing time, visit [https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html](https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html)
+  - To see your countryΓÇÖs average application processing time, visit [https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html](https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html)
 - To check if you are eligible for a Canadian visitor visa, visit [https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/eligibility.html](https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/eligibility.html)
 - To submit an application for a visa, visit [https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/apply-visitor-visa.html](https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/apply-visitor-visa.html)
 - Once you have submitted your application and have received your visa application number, **please send us your visa application number so we can help with the approval process times.**

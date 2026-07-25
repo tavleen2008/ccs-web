@@ -1,4 +1,4 @@
-export const title = "Privacy and Data Policy";
+﻿export const title = "Privacy and Data Policy";
 export const content = `
 ## Key Points
 
@@ -44,7 +44,7 @@ Cloudflare: [https://www.cloudflare.com/privacypolicy](https://www.cloudflare.co
 Hotjar: [https://www.hotjar.com/legal/policies/privacy](https://www.hotjar.com/legal/policies/privacy)
   
 **Bug Reporting**    
-We collect error reports on our web and mobile properties through [Bugsnag](https://www.bugsnag.com/). This information includes data such as your browser and operating system to help us effectively find and remove bugs in our codebase. We encourage you to read and understand Bugsnag’s privacy policy at [https://docs.bugsnag.com/legal/privacy-policy/](https://docs.bugsnag.com/legal/privacy-policy/)  
+We collect error reports on our web and mobile properties through [Bugsnag](https://www.bugsnag.com/). This information includes data such as your browser and operating system to help us effectively find and remove bugs in our codebase. We encourage you to read and understand BugsnagΓÇÖs privacy policy at [https://docs.bugsnag.com/legal/privacy-policy/](https://docs.bugsnag.com/legal/privacy-policy/)  
 ### Data we collect when you apply or sign up as a participant
 We collect two distinct categories of data from our participants:    
 - "Primary" data necessary for us to host our event

@@ -8,9 +8,6 @@ export * from "./DidWeMissAnything";
 export { default as MailingListSignup } from "./MailingListSignup";
 export * from "./MailingListSignup";
 
-export { default as MailingListSignupHero } from "./MailingListSignupHero";
-export * from "./MailingListSignupHero";
-
 export { default as Layout } from "./base/Layout";
 export * from "./base/Layout";
 
