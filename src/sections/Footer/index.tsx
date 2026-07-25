@@ -150,61 +150,6 @@ const ColourfulBg2 = styled.div<{ i: number }>`
   background: ${({ i }) => SOLID_CYCLE[(i + 5) % SOLID_CYCLE.length]};
 `;
 
-const BottomTextContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-
-  ${mediaQueries.custom(515)} {
-    flex-direction: column;
-    gap: 20px;
-  }
-`;
-
-const MinorBottomContainer = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 50px;
-
-  ${mediaQueries.custom(515)} {
-    flex-direction: column;
-    align-items: start;
-    gap: 0px;
-  }
-`;
-
-const BottomText = styled.a`
-  padding: 0px 20px 10px 20px;
-  font-family: "Satoshi";
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 160%;
-  color: ${({ theme }) => theme.colors.text.dark.white};
-  text-decoration: none;
-  z-index: 30;
-  white-space: nowrap;
-
-  :hover {
-    transition: opacity 200ms ease-in-out;
-    opacity: 0.85;
-  }
-`;
-
-const CopyrightText = styled.p`
-  padding: 0px 20px 10px 20px;
-  font-family: "Satoshi";
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 160%;
-  color: ${({ theme }) => theme.colors.text.dark.white};
-  text-decoration: none;
-  z-index: 30;
-  white-space: nowrap;
-
-  :hover {
-    transition: opacity 200ms ease-in-out;
-    opacity: 0.85;
-  }
-`;
 
 const Footer: React.FC = () => {
   useEffect(() => {
