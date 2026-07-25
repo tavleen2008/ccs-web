@@ -66,15 +66,6 @@ const Heading: React.FC<{ currentStepIndex: number }> = ({
           A student community at Thapar Institute — learning, building, and
           collaborating with code.
         </Tagline>
-        <CtaRow>
-          <PrimaryCta smooth to="/#about">
-            Explore More <span aria-hidden="true">&rarr;</span>
-          </PrimaryCta>
-          {/* TODO(CCS): point to a dedicated events page/section once it exists */}
-          <GhostCta smooth to="/#about">
-            See Events
-          </GhostCta>
-        </CtaRow>
       </HeroSupport>
 
       <FullBleedDecor>
