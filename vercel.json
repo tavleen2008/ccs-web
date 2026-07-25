@@ -1,5 +1,7 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "build",
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "build": {
+    "env": {
+      "NODE_OPTIONS": "--openssl-legacy-provider"
+    }
+  }
 }
