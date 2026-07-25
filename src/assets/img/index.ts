@@ -27,12 +27,6 @@ export { default as YouBelongInTech2 } from "./hero/youbelongintech2.jpg";
 export { default as YouBelongInTech3 } from "./hero/youbelongintech3.jpg";
 
 export { default as MLHLogo } from "./hero/mlh-logo.svg";
-export { default as Left1 } from "./hero/leftGlitch1.png";
-export { default as Left2 } from "./hero/leftGlitch2.png";
-export { default as Left3 } from "./hero/leftGlitch3.png";
-export { default as Right1 } from "./hero/rightGlitch1.png";
-export { default as Right2 } from "./hero/rightGlitch2.png";
-export { default as Right3 } from "./hero/rightGlitch3.png";
 export { default as LeftStarsAndGears } from "./hero/leftDecor.svg";
 export { default as RightStarsAndGears } from "./hero/rightDecor.svg";
 

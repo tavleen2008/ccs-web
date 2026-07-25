@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Collaboration, Learning } from "src/assets/img";
 import {
   ContentWrapper,
@@ -6,7 +6,7 @@ import {
   BrowserWindow,
 } from "src/components/base";
 import { SectionId } from "src/constants";
-import { useDeviceSize, useWindowSize } from "src/utils";
+import { useDeviceSize } from "src/utils";
 import styled, { useTheme } from "styled-components";
 
 import About from "./About";
@@ -17,21 +17,10 @@ import YouBelongInTech from "./YouBelongInTech";
 
 const Hero: React.FC = () => {
   const theme = useTheme();
-  const { windowWidth } = useWindowSize();
-  const [glitchOn, setGlitchOn] = useState(true);
-  const isUltraWide = windowWidth && windowWidth > 1440;
-  useEffect(() => {
-    const timeoutId = setTimeout(() => setGlitchOn(false), 1710);
-    return () => clearTimeout(timeoutId);
-  }, []);
 
   return (
     <SectionWrapper id={SectionId.HERO}>
-      <ContentWrapper
-        style={{
-          maxWidth: glitchOn && !isUltraWide ? "100vw" : "1200px",
-        }}
-      >
+      <ContentWrapper style={{ maxWidth: "1200px" }}>
         {!useDeviceSize("tablet") ? (
           <FullPageScroller Background={Heading}>
             {/* Step 0: text-first view — heading shows "Learn" on its own,
