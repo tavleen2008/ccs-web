@@ -41,6 +41,21 @@ declare module "styled-components" {
         infomative: string;
         warning: string;
       };
+      solid: {
+        navy: string;
+        slateBlue: string;
+        steelBlue: string;
+        mutedCyan: string;
+        softTeal: string;
+        graphite: string;
+        coolGray: string;
+        mutedIndigo: string;
+        warmAmber: string;
+        dustyGold: string;
+        softLavender: string;
+        darkOlive: string;
+        offWhite: string;
+      };
     };
   }
 }

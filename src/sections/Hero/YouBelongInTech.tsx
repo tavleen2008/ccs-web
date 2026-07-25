@@ -27,10 +27,7 @@ const YouBelongInTech: React.FC = () => {
     <TechContainer ref={ref}>
       <PopUpWrapper inView={isInView} style={{ zIndex: 8 }}>
         <ImgContainer0>
-          <BrowserWindowGradient
-            gradientStartColor={theme.colors.primary.blue}
-            gradientEndColor={theme.colors.primary.purple}
-          >
+          <BrowserWindowGradient color={theme.colors.solid.navy}>
             <TextContainer>
               <ResponsiveH2>You belong in tech</ResponsiveH2>
               <ResponsiveLB>{YouBelongText}</ResponsiveLB>
@@ -42,15 +39,9 @@ const YouBelongInTech: React.FC = () => {
         <ResponsiveFlexRow>
           <PopUpWrapper1 inView={isInView}>
             <ImgContainer1>
-              <BrowserWindow
-                gradientStartColor={theme.colors.primary.pink}
-                gradientEndColor={theme.colors.primary.purple}
-              >
+              <BrowserWindow color={theme.colors.solid.softLavender}>
                 <div style={{ position: "relative" }}>
-                  <GradientOverlay
-                    gradientStartColor={theme.colors.primary.pink}
-                    gradientEndColor={theme.colors.primary.purple}
-                  />
+                  <GradientOverlay color={theme.colors.solid.softLavender} />
                   <Img1
                     src={YouBelongInTech1}
                     alt="A student walking with food in their hands at a society event"
@@ -62,15 +53,9 @@ const YouBelongInTech: React.FC = () => {
           </PopUpWrapper1>
           <PopUpWrapper2 inView={isInView}>
             <ImgContainer2>
-              <BrowserWindow
-                gradientStartColor={theme.colors.primary.yellow}
-                gradientEndColor={theme.colors.primary.orange}
-              >
+              <BrowserWindow color={theme.colors.solid.dustyGold}>
                 <div style={{ position: "relative" }}>
-                  <GradientOverlay
-                    gradientStartColor={theme.colors.primary.yellow}
-                    gradientEndColor={theme.colors.primary.orange}
-                  />
+                  <GradientOverlay color={theme.colors.solid.dustyGold} />
                   <Img2
                     src={YouBelongInTech3}
                     alt="Two students holding sleeping bags at a society event"
@@ -83,15 +68,9 @@ const YouBelongInTech: React.FC = () => {
         </ResponsiveFlexRow>
         <PopUpWrapper3 inView={isInView}>
           <ImgContainer3>
-            <BrowserWindow
-              gradientStartColor={theme.colors.primary.cyan}
-              gradientEndColor={theme.colors.primary.blue}
-            >
+            <BrowserWindow color={theme.colors.solid.steelBlue}>
               <div style={{ position: "relative" }}>
-                <GradientOverlay
-                  gradientStartColor={theme.colors.primary.cyan}
-                  gradientEndColor={theme.colors.primary.blue}
-                />
+                <GradientOverlay color={theme.colors.solid.steelBlue} />
                 <Img3
                   src={YouBelongInTech2}
                   alt="A group of students posing together outdoors at a Creative Computing Society event"

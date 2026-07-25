@@ -40,23 +40,18 @@ export const PopUpWrapper = styled.div<BrowserProps>`
   }
 `;
 
-interface GradientProps {
-  gradientStartColor: string;
-  gradientEndColor: string;
+interface TintProps {
+  color: string;
 }
 
-export const GradientOverlay = styled.div<GradientProps>`
+export const GradientOverlay = styled.div<TintProps>`
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    to right,
-    ${(props) => props.gradientStartColor},
-    ${(props) => props.gradientEndColor}
-  );
-  opacity: 0.2;
+  background: ${(props) => props.color};
+  opacity: 0.16;
 `;
 
 export const Column = styled.div`

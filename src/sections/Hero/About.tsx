@@ -24,10 +24,7 @@ const About: React.FC = () => {
   return (
     <AboutContainer ref={ref} id={SectionId.ABOUT}>
       <PopUpWrapper inView={isInView} style={{ zIndex: 8 }}>
-        <BrowserWindowGradient
-          gradientStartColor={theme.colors.primary.blue}
-          gradientEndColor={theme.colors.primary.purple}
-        >
+        <BrowserWindowGradient color={theme.colors.solid.mutedIndigo}>
           <TextContainer>
             <ResponsiveH2>{!useDeviceSize(499) && "About CCS "}</ResponsiveH2>
             <ResponsiveLB>{AboutText}</ResponsiveLB>
@@ -37,18 +34,12 @@ const About: React.FC = () => {
       <ImagesContainer>
         <PopUpWrapper1 inView={isInView}>
           <ImgContainer1>
-            <BrowserWindow
-              gradientStartColor={theme.colors.primary.cyan}
-              gradientEndColor={theme.colors.primary.blue}
-            >
+            <BrowserWindow color={theme.colors.solid.steelBlue}>
               <div style={{ position: "relative" }}>
-                <GradientOverlay
-                  gradientStartColor={theme.colors.primary.cyan}
-                  gradientEndColor={theme.colors.primary.blue}
-                />
+                <GradientOverlay color={theme.colors.solid.steelBlue} />
                 <Img1
                   src={About1}
-                  alt="Hacker in blue shirt eating"
+                  alt="A student in a blue shirt eating"
                   loading="lazy"
                 />
               </div>
@@ -57,18 +48,12 @@ const About: React.FC = () => {
         </PopUpWrapper1>
         <PopUpWrapper2 inView={isInView}>
           <ImgContainer2>
-            <BrowserWindow
-              gradientStartColor={theme.colors.primary.orange}
-              gradientEndColor={theme.colors.primary.pink}
-            >
+            <BrowserWindow color={theme.colors.solid.warmAmber}>
               <div style={{ position: "relative" }}>
-                <GradientOverlay
-                  gradientStartColor={theme.colors.primary.orange}
-                  gradientEndColor={theme.colors.primary.pink}
-                />
+                <GradientOverlay color={theme.colors.solid.warmAmber} />
                 <Img2
                   src={About2}
-                  alt="A group of hackers celebrating a tall tower of plastic cups"
+                  alt="A group of students celebrating a tall tower of plastic cups"
                   loading="lazy"
                 />
               </div>

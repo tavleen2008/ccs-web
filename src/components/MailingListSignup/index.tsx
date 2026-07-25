@@ -190,31 +190,20 @@ const StyledButton = styled.button<{ isSubmitted: boolean }>`
   margin: 8px;
   cursor: pointer;
   border: white 2px solid;
-  background: linear-gradient(
-    270deg,
-    rgba(31, 166, 255, 0.5) 0%,
-    rgba(137, 107, 255, 0.5) 98.64%
-  );
+  background: ${({ theme }) => theme.colors.solid.steelBlue};
+  transition: background 0.15s ease;
 
   &:hover,
   &:focus {
     outline: none;
-    box-shadow: 0 0 10px ${({ theme }) => theme.colors.primary.purple};
-    background: linear-gradient(
-      270deg,
-      rgba(31, 166, 255, 0.75) 0%,
-      rgba(137, 107, 255, 0.75) 98.64%
-    );
+    box-shadow: 0 0 10px ${({ theme }) => theme.colors.solid.mutedIndigo};
+    background: ${({ theme }) => theme.colors.solid.mutedIndigo};
   }
 
   &:disabled {
     cursor: not-allowed;
     filter: grayscale(1);
-    background: linear-gradient(
-      270deg,
-      rgba(31, 166, 255, 0.5) 0%,
-      rgba(137, 107, 255, 0.5) 98.64%
-    );
+    background: ${({ theme }) => theme.colors.solid.steelBlue};
     box-shadow: none;
   }
 

@@ -1,38 +1,30 @@
 import React, { ComponentPropsWithoutRef } from "react";
 import styled from "styled-components";
 
-interface ButtonGradientColors {
-  gradientStartColor: string;
-  gradientEndColor: string;
-  hoverGradientStartColor: string;
-  hoverGradientEndColor: string;
+interface ButtonColors {
+  color: string;
+  hoverColor: string;
   width: number;
   boxShadow: string;
 }
 
-type Props = ComponentPropsWithoutRef<"button"> & ButtonGradientColors;
+type Props = ComponentPropsWithoutRef<"button"> & ButtonColors;
 
-const ButtonContainer = styled.div<ButtonGradientColors>`
+const ButtonContainer = styled.div<ButtonColors>`
   display: flex;
   flex-direction: column;
   justify-content: center;
   border: 2px solid ${({ theme }) => theme.colors.text.dark.white};
   padding: 8px 32px 10px 32px;
-  background: linear-gradient(
-    270deg,
-    ${(props) => props.gradientStartColor} 0%,
-    ${(props) => props.gradientEndColor} 98.64%
-  );
+  background: ${(props) => props.color};
   width: ${(props) => props.width}px;
+  transition: background 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
   &:hover,
   &:focus {
     cursor: pointer;
+    transform: translateY(-1px);
     box-shadow: 0 0 10px ${(props) => props.boxShadow};
-    background: linear-gradient(
-      270deg,
-      ${(props) => props.hoverGradientStartColor} 0%,
-      ${(props) => props.hoverGradientEndColor} 98.64%
-    );
+    background: ${(props) => props.hoverColor};
   }
 `;
 
@@ -43,19 +35,15 @@ const ButtonText = styled.div`
 `;
 
 const Button: React.FC<Props> = ({
-  gradientStartColor,
-  gradientEndColor,
-  hoverGradientStartColor,
-  hoverGradientEndColor,
+  color,
+  hoverColor,
   width,
   boxShadow,
   ...props
 }) => (
   <ButtonContainer
-    gradientStartColor={gradientStartColor}
-    gradientEndColor={gradientEndColor}
-    hoverGradientEndColor={hoverGradientEndColor}
-    hoverGradientStartColor={hoverGradientStartColor}
+    color={color}
+    hoverColor={hoverColor}
     width={width}
     boxShadow={boxShadow}
   >

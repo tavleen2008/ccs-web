@@ -37,28 +37,13 @@ const StyledLink = styled.a`
   width: fit-content;
   text-decoration: none;
   outline: none;
+  color: ${theme.colors.solid.steelBlue};
+  transition: color 0.15s ease;
   &:hover,
   &:focus {
-    background-image: linear-gradient(
-      to left,
-      ${theme.colors.primary.cyan} 0%,
-      ${theme.colors.primary.purple} 100%
-    );
+    color: ${theme.colors.solid.mutedCyan};
     cursor: pointer;
   }
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-image: linear-gradient(
-    to left,
-    ${theme.colors.primary.blue} 0%,
-    ${theme.colors.primary.purple} 100%
-  );
-  -webkit-background-image: linear-gradient(
-    to left,
-    ${theme.colors.primary.blue} 0%,
-    ${theme.colors.primary.purple} 100%
-  );
 `;
 const SocialsWrapper = styled.div`
   display: flex;

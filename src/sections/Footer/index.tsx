@@ -116,70 +116,27 @@ const FooterText = styled(LargeBodyBold)`
   line-height: 200%;
 `;
 
-const ColourfulBg1 = styled.div<{ i: number }>`
-  ${({ i }) =>
-    i < 4 &&
-    css`
-      background: linear-gradient(90deg, #3b82f6 0%, #4b8df7 100%);
-    `}
-  ${({ i }) =>
-    i >= 4 &&
-    i < 7 &&
-    css`
-      background: linear-gradient(90deg, #4b8df7 0%, #5b93f2 100%);
-    `}
-  ${({ i }) =>
-    i >= 7 &&
-    i < 9 &&
-    css`
-      background: linear-gradient(90deg, #5b93f2 0%, #38bdf8 100%);
-    `}
+// One deliberate solid per organizer chip, cycling through the site's
+// muted "no-gradient" palette instead of blending between two colors.
+const SOLID_CYCLE = [
+  theme.colors.solid.steelBlue,
+  theme.colors.solid.mutedIndigo,
+  theme.colors.solid.softTeal,
+  theme.colors.solid.warmAmber,
+  theme.colors.solid.slateBlue,
+  theme.colors.solid.mutedCyan,
+  theme.colors.solid.coolGray,
+  theme.colors.solid.dustyGold,
+  theme.colors.solid.softLavender,
+  theme.colors.solid.graphite,
+  theme.colors.solid.navy,
+  theme.colors.solid.darkOlive,
+];
 
-  ${({ i }) =>
-    i >= 9 &&
-    i < 13 &&
-    css`
-      background: linear-gradient(90deg, #38bdf8 0%, #35cdd6 100%);
-    `}
-
-  ${({ i }) =>
-    i >= 13 &&
-    i < 16 &&
-    css`
-      background: linear-gradient(90deg, #35cdd6 0%, #34d2e0 100%);
-    `}
-  
-  ${({ i }) =>
-    i >= 16 &&
-    i < 18 &&
-    css`
-      background: linear-gradient(90deg, #34d2e0 0%, #38bdf8 100%);
-    `}
-  
-  ${({ i }) =>
-    i === 18 &&
-    css`
-      background: linear-gradient(90deg, #34d2e0 0%, #38bdf8 100%);
-    `}
-  
-  ${({ i }) =>
-    i >= 19 &&
-    i < 21 &&
-    css`
-      background: linear-gradient(90deg, #38bdf8 0%, #46a2f5 100%);
-    `}
-
-  ${({ i }) =>
-    i >= 21 &&
-    i < 24 &&
-    css`
-      background: linear-gradient(90deg, #46a2f5 0%, #3b82f6 100%);
-    `}
-
+const chipStyle = css`
   position: absolute;
   z-index: -1;
   top: -5px;
-  left: 5px;
   width: 45px;
   height: 45px;
   opacity: 0.8;
@@ -195,92 +152,16 @@ const ColourfulBg1 = styled.div<{ i: number }>`
   }
 `;
 
+const ColourfulBg1 = styled.div<{ i: number }>`
+  ${chipStyle}
+  left: 5px;
+  background: ${({ i }) => SOLID_CYCLE[i % SOLID_CYCLE.length]};
+`;
+
 const ColourfulBg2 = styled.div<{ i: number }>`
-  ${({ i }) =>
-    i < 1 &&
-    css`
-      background: linear-gradient(90deg, #3b82f6 0%, #4277ee 100%);
-    `}
-
-  ${({ i }) =>
-    i >= 1 &&
-    i < 3 &&
-    css`
-      background: linear-gradient(90deg, #4277ee 0%, #5b8def 100%);
-    `}
-  
-  ${({ i }) =>
-    i >= 3 &&
-    i < 5 &&
-    css`
-      background: linear-gradient(90deg, #5b8def 0%, #6b78f0 100%);
-    `}
-  
-  ${({ i }) =>
-    i >= 5 &&
-    i < 7 &&
-    css`
-      background: linear-gradient(90deg, #6b78f0 0%, #6366f1 100%);
-    `}
-  
-  ${({ i }) =>
-    i >= 7 &&
-    i < 11 &&
-    css`
-      background: linear-gradient(90deg, #6366f1 0%, #6f66f2 100%);
-    `}
-
-  ${({ i }) =>
-    i >= 11 &&
-    i < 13 &&
-    css`
-      background: linear-gradient(90deg, #6f66f2 0%, #7c6cf4 100%);
-    `}
-  
-  ${({ i }) =>
-    i >= 13 &&
-    i < 15 &&
-    css`
-      background: linear-gradient(90deg, #7c6cf4 0%, #818cf8 100%);
-    `}
-  
-  ${({ i }) =>
-    i >= 15 &&
-    i < 18 &&
-    css`
-      background: linear-gradient(90deg, #818cf8 0%, #8f9bf9 100%);
-    `}
-  
-  ${({ i }) =>
-    i === 18 &&
-    css`
-      background: linear-gradient(90deg, #8f9bf9 0%, #9aa6fb 100%);
-    `}
-
-  ${({ i }) =>
-    i >= 19 &&
-    i < 24 &&
-    css`
-      background: linear-gradient(90deg, #9aa6fb 0%, #a5b0fc 100%);
-    `}
-
-  position: absolute;
-  z-index: -1;
-  top: -5px;
+  ${chipStyle}
   left: -5px;
-  width: 45px;
-  height: 45px;
-  opacity: 0.8;
-
-  ${mediaQueries.medium} {
-    width: 40px;
-    height: 40px;
-  }
-
-  ${mediaQueries.largeMobile} {
-    width: 35px;
-    height: 35px;
-  }
+  background: ${({ i }) => SOLID_CYCLE[(i + 5) % SOLID_CYCLE.length]};
 `;
 
 const BottomTextContainer = styled.div`

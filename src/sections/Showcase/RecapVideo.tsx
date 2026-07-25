@@ -19,7 +19,7 @@ const RecapVideoContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 12px;
-  background: linear-gradient(150deg, #1b2440 0%, #10182b 100%);
+  background: ${({ theme }) => theme.colors.solid.graphite};
 
   ${mediaQueries.tablet} {
     width: 95%;

@@ -39,18 +39,12 @@ const Hero: React.FC = () => {
                 cycling the word Learn → Code → Collaborate. */}
             <IntroStep aria-hidden="true" />
             <LeftImgContainer style={{ paddingLeft: "30px" }}>
-              <BrowserWindow
-                gradientStartColor={theme.colors.primary.yellow}
-                gradientEndColor={theme.colors.primary.orange}
-              >
+              <BrowserWindow color={theme.colors.solid.dustyGold}>
                 <div style={{ position: "relative" }}>
-                  <GradientOverlay
-                    gradientStartColor={theme.colors.primary.yellow}
-                    gradientEndColor={theme.colors.primary.orange}
-                  />
+                  <GradientOverlay color={theme.colors.solid.dustyGold} />
                   <img
                     src={Learning}
-                    alt="Hackers sitting at tables with their laptops"
+                    alt="Students sitting at tables with their laptops"
                     style={{
                       width: "480px",
                       height: "100%",
@@ -61,18 +55,12 @@ const Hero: React.FC = () => {
               </BrowserWindow>
             </LeftImgContainer>
             <RightImgContainer style={{ paddingRight: "20px" }}>
-              <BrowserWindow
-                gradientStartColor={theme.colors.primary.orange}
-                gradientEndColor={theme.colors.primary.pink}
-              >
+              <BrowserWindow color={theme.colors.solid.softTeal}>
                 <div style={{ position: "relative" }}>
-                  <GradientOverlay
-                    gradientStartColor={theme.colors.primary.orange}
-                    gradientEndColor={theme.colors.primary.pink}
-                  />
+                  <GradientOverlay color={theme.colors.solid.softTeal} />
                   <img
                     src={Collaboration}
-                    alt="Two hackers consult a mentor for assistance at the Mentor Hub"
+                    alt="Two students consult a mentor for assistance at the Mentor Hub"
                     style={{
                       width: "496px",
                       height: "100%",

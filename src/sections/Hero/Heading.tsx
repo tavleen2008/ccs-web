@@ -286,16 +286,12 @@ const ctaBase = css`
 const PrimaryCta = styled(HashLink)`
   ${ctaBase}
   color: #ffffff;
-  background: linear-gradient(
-    135deg,
-    ${({ theme }) => theme.colors.primary.blue} 0%,
-    ${({ theme }) => theme.colors.primary.cyan} 100%
-  );
+  background: ${({ theme }) => theme.colors.solid.steelBlue};
   box-shadow: 0 8px 20px -8px rgba(0, 0, 0, 0.6);
   &:hover {
     transform: translateY(-1px);
     box-shadow: 0 12px 26px -10px rgba(0, 0, 0, 0.65);
-    filter: brightness(1.05);
+    background: ${({ theme }) => theme.colors.solid.mutedCyan};
   }
 `;
 

@@ -42,8 +42,7 @@ interface YearImage {
 
 export interface Year {
   year: string;
-  gradientStart: string;
-  gradientEnd: string;
+  color: string;
   description: string[];
   top: {
     isMobile: string;
@@ -64,8 +63,7 @@ export interface Year {
 
 const _2014: Year = {
   year: "2014",
-  gradientStart: theme.colors.primary.cyan,
-  gradientEnd: theme.colors.primary.blue,
+  color: theme.colors.solid.steelBlue,
   description: [
     "The Creative Computing Society community comes together around a shared love of building and problem-solving.",
     "Learn · Code · Collaborate",
@@ -126,8 +124,7 @@ const _2014: Year = {
 
 const _2015: Year = {
   year: "2015",
-  gradientStart: theme.colors.primary.pink,
-  gradientEnd: theme.colors.primary.purple,
+  color: theme.colors.solid.mutedIndigo,
   description: [
     "Workshops open up to every branch, welcoming students of all backgrounds into tech.",
     "Peer-led sessions and hands-on learning",
@@ -189,8 +186,7 @@ const _2015: Year = {
 
 const _2016: Year = {
   year: "2016",
-  gradientStart: theme.colors.primary.yellow,
-  gradientEnd: theme.colors.primary.cyan,
+  color: theme.colors.solid.mutedCyan,
   description: [
     "Our mentorship network grows, pairing students one-on-one so everyone can dream bigger.",
     "Mentorship · Guidance · Growth",
@@ -252,8 +248,7 @@ const _2016: Year = {
 
 const _2017: Year = {
   year: "2017",
-  gradientStart: theme.colors.primary.orange,
-  gradientEnd: theme.colors.primary.blue,
+  color: theme.colors.solid.warmAmber,
   description: [
     "We experiment with new ways to make every member feel welcome and seen.",
     "Community first, always",
@@ -315,8 +310,7 @@ const _2017: Year = {
 
 const _2018: Year = {
   year: "2018",
-  gradientStart: theme.colors.primary.blue,
-  gradientEnd: theme.colors.primary.purple,
+  color: theme.colors.solid.slateBlue,
   description: [
     "A landmark year of flagship events and standout student projects.",
     "Build · Ship · Repeat",
@@ -378,8 +372,7 @@ const _2018: Year = {
 
 const _2019: Year = {
   year: "2019",
-  gradientStart: theme.colors.primary.purple,
-  gradientEnd: theme.colors.primary.orange,
+  color: theme.colors.solid.softTeal,
   description: [
     "We scale things up, reaching more students across campus than ever before.",
     "A growing community of builders",
@@ -441,8 +434,7 @@ const _2019: Year = {
 
 const _2020: Year = {
   year: "2020",
-  gradientStart: theme.colors.primary.pink,
-  gradientEnd: theme.colors.primary.cyan,
+  color: theme.colors.solid.graphite,
   description: [
     "The society goes fully online, keeping the community connected from anywhere.",
     "Resilient · Remote · Together",
@@ -504,8 +496,7 @@ const _2020: Year = {
 
 const _2021: Year = {
   year: "2021",
-  gradientStart: theme.colors.primary.yellow,
-  gradientEnd: theme.colors.primary.purple,
+  color: theme.colors.solid.coolGray,
   description: [
     "We return with hybrid events blending in-person energy with online reach.",
     "Hybrid experiences for everyone",
@@ -567,8 +558,7 @@ const _2021: Year = {
 
 const _2022: Year = {
   year: "2022",
-  gradientStart: theme.colors.primary.orange,
-  gradientEnd: theme.colors.primary.pink,
+  color: theme.colors.solid.dustyGold,
   description: [
     "Members come back together in person for a full calendar of events.",
     "Back together, building again",

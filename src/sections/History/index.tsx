@@ -37,8 +37,7 @@ const History: React.FC = () => {
   };
 
   const ImageWindow: React.FC<ImageWindowProps> = ({
-    gradientStartColor,
-    gradientEndColor,
+    color,
     source,
     orientation,
     top,
@@ -48,15 +47,9 @@ const History: React.FC = () => {
   }) => {
     return (
       <WindowAnimation top={top} left={left} order={order}>
-        <BrowserWindow
-          gradientStartColor={gradientStartColor}
-          gradientEndColor={gradientEndColor}
-        >
+        <BrowserWindow color={color}>
           <BrowserImageContainer orientation={orientation}>
-            <GradientOverlay
-              gradientStartColor={gradientStartColor}
-              gradientEndColor={gradientEndColor}
-            />
+            <GradientOverlay color={color} />
             <BrowserImage src={source} alt={alt} loading="lazy" />
           </BrowserImageContainer>
         </BrowserWindow>
@@ -65,8 +58,7 @@ const History: React.FC = () => {
   };
 
   const TextWindow: React.FC<TextWindowProps> = ({
-    gradientStartColor,
-    gradientEndColor,
+    color,
     year,
     description,
     top,
@@ -76,10 +68,7 @@ const History: React.FC = () => {
     return (
       <TextWindowWrapper>
         <WindowAnimation top={top} left={left} order={order}>
-          <BrowserWindowGradient
-            gradientStartColor={gradientStartColor}
-            gradientEndColor={gradientEndColor}
-          >
+          <BrowserWindowGradient color={color}>
             <BrowserTextContainer>
               <LargeBodyBold style={{ color: theme.colors.text.dark.white }}>
                 ► {year}
@@ -139,8 +128,7 @@ const History: React.FC = () => {
           </YearContainer>
           <WindowContainer>
             <TextWindow
-              gradientStartColor={folderOpenState.gradientStart}
-              gradientEndColor={folderOpenState.gradientEnd}
+              color={folderOpenState.color}
               year={folderOpenState.year}
               description={folderOpenState.description}
               top={
@@ -168,8 +156,7 @@ const History: React.FC = () => {
                 <ImageWindow
                   key={index}
                   source={String(image.source)}
-                  gradientStartColor={folderOpenState.gradientStart}
-                  gradientEndColor={folderOpenState.gradientEnd}
+                  color={folderOpenState.color}
                   orientation={image.orientation}
                   top={
                     isMobile
@@ -371,9 +358,8 @@ const FolderYear = styled(LargeBodyBold)`
   color: ${({ theme }) => theme.colors.text.dark.white};
 `;
 
-interface GradientProps {
-  gradientStartColor: string;
-  gradientEndColor: string;
+interface TintProps {
+  color: string;
 }
 
 interface PositionProps {
@@ -382,13 +368,13 @@ interface PositionProps {
   order: number;
 }
 
-type TextWindowProps = GradientProps &
+type TextWindowProps = TintProps &
   PositionProps & {
     year: string;
     description: string[];
   };
 
-type ImageWindowProps = GradientProps &
+type ImageWindowProps = TintProps &
   PositionProps & {
     source: string;
     orientation: string;
@@ -450,17 +436,13 @@ const BrowserImageContainer = styled.div<ImageOrientation>`
   }
 `;
 
-const GradientOverlay = styled.div<GradientProps>`
+const GradientOverlay = styled.div<TintProps>`
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    to right,
-    ${(props) => props.gradientStartColor},
-    ${(props) => props.gradientEndColor}
-  );
+  background: ${(props) => props.color};
   opacity: 0.2;
 `;
 

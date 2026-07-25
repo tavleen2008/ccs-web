@@ -49,6 +49,25 @@ export const theme: DefaultTheme = {
       infomative: "#7DD3FC",
       warning: "#FCD34D",
     },
+    // Solid, muted "no-gradient" design system. Every card/tile/header/button
+    // across the site draws a single deliberate color from this set instead
+    // of a two-stop gradient — variety comes from which solid is picked, not
+    // from blending between two.
+    solid: {
+      navy: "#17233D",
+      slateBlue: "#3E4C68",
+      steelBlue: "#35608C",
+      mutedCyan: "#2E6B7E",
+      softTeal: "#2D6A5C",
+      graphite: "#2A2E38",
+      coolGray: "#4B5563",
+      mutedIndigo: "#454B8C",
+      warmAmber: "#A8763B",
+      dustyGold: "#99793E",
+      softLavender: "#5C5A82",
+      darkOlive: "#565830",
+      offWhite: "#E7E9EE",
+    },
   },
 };
 

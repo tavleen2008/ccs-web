@@ -3,8 +3,7 @@ import { mediaQueries } from "src/utils/responsive";
 import styled from "styled-components";
 
 interface WindowProps {
-  gradientStartColor: string;
-  gradientEndColor: string;
+  color: string;
 }
 
 type Props = ComponentPropsWithoutRef<"div"> & WindowProps;
@@ -25,11 +24,7 @@ const WindowToolbar = styled.div<WindowProps>`
   flex-direction: row-reverse;
   align-items: center;
   gap: 8px;
-  background: linear-gradient(
-    90deg,
-    ${(props) => props.gradientStartColor},
-    ${(props) => props.gradientEndColor}
-  );
+  background: ${(props) => props.color};
   border-bottom: 1px solid rgba(148, 163, 184, 0.18);
 
   ${mediaQueries.largeMobile} {
@@ -75,31 +70,17 @@ const WindowContent = styled.div`
   color: ${({ theme }) => theme.colors.text.dark.white};
 `;
 
-const WindowContentGradient = styled.div<WindowProps>`
+const WindowContentTinted = styled.div<WindowProps>`
   display: flex;
   justify-content: center;
-  background: linear-gradient(
-      90deg,
-      ${(props) => props.gradientStartColor}22,
-      ${(props) => props.gradientEndColor}22
-    ),
-    ${({ theme }) => theme.colors.background.dark};
+  background: ${({ theme }) => theme.colors.background.dark};
+  border-top: 2px solid ${(props) => props.color};
 `;
 
-const BrowserWindow: React.FC<Props> = ({
-  gradientStartColor,
-  gradientEndColor,
-  ...props
-}) => (
+const BrowserWindow: React.FC<Props> = ({ color, ...props }) => (
   <WindowContainer>
-    <ShadowBox
-      gradientStartColor={gradientStartColor}
-      gradientEndColor={gradientEndColor}
-    />
-    <WindowToolbar
-      gradientStartColor={gradientStartColor}
-      gradientEndColor={gradientEndColor}
-    >
+    <ShadowBox color={color} />
+    <WindowToolbar color={color}>
       <WindowToolbarIcon />
       <WindowToolbarIcon />
       <WindowToolbarIcon />
@@ -108,30 +89,15 @@ const BrowserWindow: React.FC<Props> = ({
   </WindowContainer>
 );
 
-const BrowserWindowGradient: React.FC<Props> = ({
-  gradientStartColor,
-  gradientEndColor,
-  ...props
-}) => (
+const BrowserWindowGradient: React.FC<Props> = ({ color, ...props }) => (
   <WindowContainer>
-    <ShadowBox
-      gradientStartColor={gradientStartColor}
-      gradientEndColor={gradientEndColor}
-    />
-    <WindowToolbar
-      gradientStartColor={gradientStartColor}
-      gradientEndColor={gradientEndColor}
-    >
+    <ShadowBox color={color} />
+    <WindowToolbar color={color}>
       <WindowToolbarIcon />
       <WindowToolbarIcon />
       <WindowToolbarIcon />
     </WindowToolbar>
-    <WindowContentGradient
-      gradientStartColor={gradientStartColor}
-      gradientEndColor={gradientEndColor}
-    >
-      {props.children}
-    </WindowContentGradient>
+    <WindowContentTinted color={color}>{props.children}</WindowContentTinted>
   </WindowContainer>
 );
 

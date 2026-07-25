@@ -187,31 +187,20 @@ const StyledButton = styled.button<{ isSubmitted: boolean }>`
   height: 39px;
   width: 117px;
   margin: 8px;
-  background: linear-gradient(
-    270deg,
-    rgba(25, 251, 255, 0.5) 0%,
-    rgba(31, 166, 255, 0.5) 98.64%
-  );
+  background: ${({ theme }) => theme.colors.solid.mutedCyan};
+  transition: background 0.15s ease;
 
   &:hover,
   &:focus {
     outline: none;
-    box-shadow: 0 0 10px ${({ theme }) => theme.colors.primary.cyan};
-    background: linear-gradient(
-      270deg,
-      rgba(25, 251, 255, 0.75) 0%,
-      rgba(31, 166, 255, 0.75) 98.64%
-    );
+    box-shadow: 0 0 10px ${({ theme }) => theme.colors.solid.steelBlue};
+    background: ${({ theme }) => theme.colors.solid.steelBlue};
   }
 
   &:disabled {
     cursor: not-allowed;
     filter: grayscale(1);
-    background: linear-gradient(
-      270deg,
-      rgba(25, 251, 255, 0.5) 0%,
-      rgba(31, 166, 255, 0.5) 98.64%
-    );
+    background: ${({ theme }) => theme.colors.solid.mutedCyan};
     box-shadow: none;
   }
   ${mediaQueries.largeMobile} {

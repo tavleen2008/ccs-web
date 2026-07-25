@@ -149,30 +149,14 @@ const WhiteHeading1 = styled(Heading1)`
 const StyledWhiteHeading1 = styled(WhiteHeading1)`
   font-size: 56px;
   ${mediaQueries.tablet} {
-    background: linear-gradient(
-      270deg,
-      #818cf8 0%,
-      #6366f1 35.42%,
-      #3b82f6 68.75%,
-      #38bdf8 100%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: ${({ theme }) => theme.colors.solid.steelBlue};
   }
 `;
 
 const GradientHeading = styled.span`
-  background: linear-gradient(
-    270deg,
-    #818cf8 0%,
-    #6366f1 35.42%,
-    #3b82f6 68.75%,
-    #38bdf8 100%
-  );
+  color: ${({ theme }) => theme.colors.solid.steelBlue};
   filter: blur(12px);
   width: fit-content;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   position: absolute;
   left: 0;
   z-index: -20;
