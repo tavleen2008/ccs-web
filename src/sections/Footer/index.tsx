@@ -149,9 +149,8 @@ const ColourfulBg2 = styled.div<{ i: number }>`
   left: -5px;
   background: ${({ i }) => SOLID_CYCLE[(i + 5) % SOLID_CYCLE.length]};
 `;
-
-
 const Footer: React.FC = () => {
+
   useEffect(() => {
     let intervalId: number | undefined;
     let curOrganizer = 0;
