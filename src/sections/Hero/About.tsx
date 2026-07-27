@@ -37,11 +37,7 @@ const About: React.FC = () => {
             <BrowserWindow color={theme.colors.solid.steelBlue}>
               <div style={{ position: "relative" }}>
                 <GradientOverlay color={theme.colors.solid.steelBlue} />
-                <Img1
-                  src={About1}
-                  alt="ccs logo"
-                  loading="lazy"
-                />
+                <Img1 src={About1} alt="ccs logo" loading="lazy" />
               </div>
             </BrowserWindow>
           </ImgContainer1>
