@@ -39,7 +39,7 @@ const About: React.FC = () => {
                 <GradientOverlay color={theme.colors.solid.steelBlue} />
                 <Img1
                   src={About1}
-                  alt="A student in a blue shirt eating"
+                  alt="ccs logo"
                   loading="lazy"
                 />
               </div>
@@ -153,17 +153,17 @@ const ImgContainer2 = styled(ImgContainer)`
 `;
 
 const Img1 = styled.img`
-  width: 480px;
+  width: 320px;
   height: 100%;
   object-fit: cover;
   @media (max-width: 1205px) {
-    width: 62vw;
+    width: 54vw;
   }
   @media (max-width: 675px) {
-    width: 70vw;
+    width: 62vw;
   }
   ${mediaQueries.largeMobile} {
-    width: 266px;
+    width: 235px;
   }
 `;
 
